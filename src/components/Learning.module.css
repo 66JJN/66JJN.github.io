@@ -183,4 +183,40 @@
     .mindsetIcon {
         margin: 0 auto;
     }
+
+    .stepCard {
+        padding: var(--spacing-md);
+    }
+
+    .goalsSection {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .stepCard {
+        padding: var(--spacing-sm) var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .goalsSection {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .mindsetBox {
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+    }
+
+    .mindsetTitle {
+        font-size: 22px;
+    }
+
+    .mindsetText {
+        font-size: 15px;
+    }
+
+    .mindsetIcon {
+        font-size: 48px;
+    }
 }

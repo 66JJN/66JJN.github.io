@@ -22,7 +22,7 @@
 
 .problemsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
 }
@@ -123,5 +123,28 @@
 
     .problemsGrid {
         grid-template-columns: 1fr;
+    }
+
+    .problemCard {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .problemCard {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .problemTitle {
+        font-size: 18px;
+    }
+
+    .sectionText {
+        font-size: 14px;
+        padding-left: 18px;
+    }
+
+    .learnedBox {
+        padding: var(--spacing-sm);
     }
 }

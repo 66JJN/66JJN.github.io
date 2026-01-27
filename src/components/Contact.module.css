@@ -22,7 +22,7 @@
 
 .contactGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
     max-width: 900px;
     margin: var(--spacing-xl) auto 0;
@@ -33,6 +33,7 @@
     align-items: center;
     gap: var(--spacing-md);
     padding: var(--spacing-lg);
+    min-height: var(--touch-target-min);
     background: var(--color-card-bg);
     border-radius: var(--radius);
     border: 2px solid var(--color-border);
@@ -110,5 +111,28 @@
 
     .contactGrid {
         grid-template-columns: 1fr;
+    }
+
+    .contactCard {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .contactCard {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .iconWrapper {
+        width: 44px;
+        height: 44px;
+    }
+
+    .contactLabel {
+        font-size: 15px;
+    }
+
+    .contactValue {
+        font-size: 13px;
     }
 }

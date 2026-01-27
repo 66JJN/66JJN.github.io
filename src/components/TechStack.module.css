@@ -22,7 +22,7 @@
 
 .categoriesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
 }
@@ -139,5 +139,28 @@
 
     .categoryIcon {
         margin: 0 auto;
+    }
+
+    .categoryCard {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .categoriesGrid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .categoryCard {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .skillItem {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .categoryTitle {
+        font-size: 18px;
     }
 }

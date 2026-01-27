@@ -103,6 +103,7 @@
 .primaryBtn,
 .secondaryBtn {
     padding: 14px 32px;
+    min-height: var(--touch-target-min);
     font-size: 16px;
     font-weight: 600;
     border-radius: var(--radius);
@@ -183,6 +184,7 @@
 
     .intro {
         font-size: 16px;
+        line-height: 1.7;
     }
 
     .ctaButtons {
@@ -194,14 +196,45 @@
     .secondaryBtn {
         width: 100%;
         justify-content: center;
+        padding: 16px 24px;
     }
 
     .profileImageWrapper {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
     }
 
     .placeholderIcon {
-        font-size: 80px;
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .profileImageWrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .placeholderIcon {
+        font-size: 70px;
+    }
+
+    .intro {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        font-size: 15px;
+        padding: 14px 20px;
+    }
+
+    .nameEn {
+        font-size: 20px;
     }
 }

@@ -8,7 +8,7 @@
   --color-border: #e5e7eb;
   --color-card-bg: #f9fafb;
 
-  /* Spacing */
+  /* Spacing - Desktop */
   --spacing-xs: 8px;
   --spacing-sm: 16px;
   --spacing-md: 24px;
@@ -26,6 +26,30 @@
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
   --radius: 12px;
   --transition: 0.3s ease;
+
+  /* Touch targets - minimum size for mobile */
+  --touch-target-min: 44px;
+}
+
+/* Mobile spacing adjustments */
+@media (max-width: 768px) {
+  :root {
+    --spacing-md: 20px;
+    --spacing-lg: 28px;
+    --spacing-xl: 36px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 40px;
+    --spacing-3xl: 48px;
+  }
 }
 
 /* CSS Reset */
@@ -92,6 +116,18 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
 }
 
 /* Animations */

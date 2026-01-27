@@ -102,4 +102,27 @@
     .focusGrid {
         grid-template-columns: 1fr;
     }
+
+    .focusCard {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .mainText {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .paragraph {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .focusCard {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .focusTitle {
+        font-size: 20px;
+    }
 }
