@@ -1,27 +1,9 @@
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.section {
-  margin-bottom: 60px;
-}
-
-.name {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.role {
-  font-size: 22px;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 10px;
+/* Smooth transitions between sections */
+section {
+  scroll-margin-top: 20px;
 }

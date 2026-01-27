@@ -1,28 +1,24 @@
 import './App.css'
+import Hero from './components/Hero'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import CaseStudy from './components/CaseStudy'
+import About from './components/About'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="container">
-
-      {/* PROFILE */}
-      <section className="section">
-        <h1 className="name">John JJ</h1>
-        <h2 className="role">Frontend Developer (Intern)</h2>
-
-        <p className="description">
-          นักศึกษาสาย IT ที่สนใจด้าน Frontend Development  
-          มีพื้นฐาน React, JavaScript, HTML และ CSS  
-          ชอบพัฒนาเว็บไซต์ที่ใช้งานจริงและเน้นประสบการณ์ผู้ใช้
-        </p>
-
-        <p className="description">
-          กำลังมองหาที่ฝึกงานตำแหน่ง Frontend Developer (PDKM)
-        </p>
-      </section>
-
+    <div className="app">
+      <Hero />
+      <Skills />
+      <Projects />
+      <CaseStudy />
+      <About />
+      <Contact />
+      <Footer />
     </div>
   )
 }
 
 export default App
-

@@ -1,0 +1,126 @@
+.caseStudy {
+    padding: var(--spacing-3xl) 0;
+    background: white;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.sectionSubtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.section {
+    background: var(--color-card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--color-accent);
+    transition: all var(--transition);
+}
+
+.section:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.emoji {
+    font-size: 24px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    padding: var(--spacing-xs) 0;
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.highlightBox {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.highlightBox .subtitle {
+    color: white;
+}
+
+.highlightBox .text {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .section:hover {
+        transform: translateY(-4px);
+    }
+}
+
+@media (max-width: 768px) {
+    .caseStudy {
+        padding: var(--spacing-2xl) 0;
+    }
+}

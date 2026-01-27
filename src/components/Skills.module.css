@@ -1,0 +1,104 @@
+.skills {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-bg);
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: clamp(32px, 5vw, 40px);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.sectionSubtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.skillCard {
+    background: var(--color-card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    animation: fadeInUp 0.6s ease-out both;
+    border: 1px solid var(--color-border);
+}
+
+.skillCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.icon {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoryTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.skillList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xs) 0;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    transition: color var(--transition);
+}
+
+.skillItem:hover {
+    color: var(--color-accent);
+}
+
+.bullet {
+    color: var(--color-accent);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .skillsGrid {
+        grid-template-columns: 1fr;
+    }
+}
