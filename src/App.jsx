@@ -1,9 +1,11 @@
 import './App.css'
 import Hero from './components/Hero'
-import Skills from './components/Skills'
+import WhyFrontend from './components/WhyFrontend'
+import TechStack from './components/TechStack'
 import Projects from './components/Projects'
-import CaseStudy from './components/CaseStudy'
+import ProblemSolving from './components/ProblemSolving'
 import About from './components/About'
+import Learning from './components/Learning'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -11,10 +13,12 @@ function App() {
   return (
     <div className="app">
       <Hero />
-      <Skills />
+      <WhyFrontend />
+      <TechStack />
       <Projects />
-      <CaseStudy />
+      <ProblemSolving />
       <About />
+      <Learning />
       <Contact />
       <Footer />
     </div>

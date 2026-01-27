@@ -22,6 +22,7 @@ function About() {
                                 <div className={styles.timelineContent}>
                                     <h4 className={styles.degree}>ศึกษาอยู่ระดับปริญญาตรี หลักสูตรวิทยาศาสตร์บัณฑิต สาขาวิทยาการคอมพิวเตอร์ คณะเทคโนโลยีสารสนเทศและการสื่อสาร</h4>
                                     <p className={styles.school}>มหาวิทยาลัยพะเยา</p>
+                                    <p className={styles.school}>เกรดเฉลี่ยสะสม: 3.55</p>
                                     <p className={styles.year}>2566 - ปัจจุบัน</p>
                                 </div>
                             </div>
@@ -31,6 +32,7 @@ function About() {
                                 <div className={styles.timelineContent}>
                                     <h4 className={styles.degree}>มัธยมศึกษาตอนปลาย สายวิทย์-คณิต</h4>
                                     <p className={styles.school}>โรงเรียนฝางชนูปถัมภ์</p>
+                                    <p className={styles.school}>เกรดเฉลี่ยสะสม: 3.51</p>
                                     <p className={styles.year}>2563 - 2566</p>
                                 </div>
                             </div>

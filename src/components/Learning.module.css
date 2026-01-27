@@ -1,0 +1,186 @@
+.learning {
+    padding: var(--spacing-3xl) 0;
+    background: white;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: clamp(32px, 5vw, 40px);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.sectionSubtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.learningSteps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stepCard {
+    background: var(--color-card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    animation: fadeInUp 0.6s ease-out both;
+    border: 2px solid transparent;
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.stepCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-accent);
+    background: white;
+}
+
+.stepIcon {
+    font-size: 36px;
+    flex-shrink: 0;
+}
+
+.stepContent {
+    flex: 1;
+}
+
+.stepTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stepDesc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.goalsSection {
+    background: var(--color-card-bg);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing-xl);
+    border-left: 4px solid var(--color-accent);
+}
+
+.goalsTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.goalsEmoji {
+    font-size: 28px;
+}
+
+.goalsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.goalItem {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    padding: var(--spacing-xs) 0;
+    padding-left: var(--spacing-md);
+    position: relative;
+    transition: color var(--transition);
+}
+
+.goalItem:hover {
+    color: var(--color-accent);
+}
+
+.goalBullet {
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.mindsetBox {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius);
+    color: white;
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+    box-shadow: var(--shadow-md);
+}
+
+.mindsetIcon {
+    font-size: 56px;
+    flex-shrink: 0;
+}
+
+.mindsetContent {
+    flex: 1;
+}
+
+.mindsetTitle {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.mindsetText {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .learning {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .learningSteps {
+        grid-template-columns: 1fr;
+    }
+
+    .goalsList {
+        grid-template-columns: 1fr;
+    }
+
+    .mindsetBox {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mindsetIcon {
+        margin: 0 auto;
+    }
+}

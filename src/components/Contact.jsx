@@ -10,7 +10,7 @@ function Contact() {
             ),
             label: 'Email',
             value: 'pyaksda@gmail.com',
-            link: 'mailto:pyaksda@gmail.com'
+            link: 'https://mail.google.com/mail/?view=cm&to=pyaksda@gmail.com'
         },
         {
             icon: (
