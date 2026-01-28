@@ -1,16 +1,84 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing projects, skills, and professional experience.
 
-Currently, two official plugins are available:
+## 🎯 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a professional portfolio website built with React and Vite. It features a clean, modern design with sections for hero introduction, projects, case studies, skills, and contact information.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18** - UI library
+- **Vite** - Fast build tool and dev server
+- **CSS Modules** - Scoped styling for components
+- **ESLint** - Code quality and consistency
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/       # Reusable React components
+│   ├── Hero.jsx     # Landing section
+│   ├── About.jsx    # About section
+│   ├── Projects.jsx # Projects showcase
+│   ├── CaseStudy.jsx# Detailed case studies
+│   ├── Skills.jsx   # Technical skills
+│   ├── TechStack.jsx# Technology stack
+│   ├── Learning.jsx # Learning journey
+│   ├── Contact.jsx  # Contact form
+│   └── ...
+├── App.jsx          # Main app component
+└── main.jsx         # Entry point
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development Server
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 📋 Available Scripts
+
+- `npm run dev` - Start development server with HMR
+- `npm run build` - Create optimized production build
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint to check code quality
+
+## 📚 Features
+
+- ✅ Responsive design for all devices
+- ✅ Smooth animations and transitions
+- ✅ Fast load times with Vite
+- ✅ Clean, maintainable component-based architecture
+- ✅ CSS Modules for scoped styling
+- ✅ Modern UI/UX practices
+
+## 📝 License
+
+This project is open source and available under the MIT License.
