@@ -38,10 +38,7 @@ function Footer() {
 
                     <div className={styles.bottom}>
                         <p className={styles.copyright}>
-                            © {currentYear} ศุภกร แซ่พ่าน. All rights reserved.
-                        </p>
-                        <p className={styles.madeWith}>
-                            Built with <span className={styles.heart}>❤️</span> using React & Passion for Front-End
+                            © {currentYear} ศุภกร แซ่พ่าน. Front-End Developer.
                         </p>
                     </div>
                 </div>

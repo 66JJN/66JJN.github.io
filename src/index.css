@@ -1,12 +1,12 @@
 :root {
-  /* Colors */
-  --color-bg: #ffffff;
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #555555;
-  --color-accent: #2563eb;
-  --color-accent-dark: #1e40af;
-  --color-border: #e5e7eb;
-  --color-card-bg: #f9fafb;
+  /* Colors - Admin Dashboard Style */
+  --color-bg: linear-gradient(135deg, #667eea 25%, #764ba2 25%, #f093fb 25%, #4facfe 75%, #00f2fe 100%);
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #4a4a6a;
+  --color-accent: #667eea;
+  --color-accent-dark: #402168;
+  --color-border: rgba(255, 255, 255, 0.3);
+  --color-card-bg: rgba(255, 255, 255, 0.95);
 
   /* Spacing - Desktop */
   --spacing-xs: 8px;
@@ -67,10 +67,27 @@ html {
 body {
   font-family: var(--font-family);
   color: var(--color-text-primary);
-  background-color: var(--color-bg);
+  background: var(--color-bg);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Typography */

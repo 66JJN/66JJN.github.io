@@ -1,6 +1,5 @@
 .projects {
     padding: var(--spacing-3xl) 0;
-    background: var(--color-card-bg);
 }
 
 .sectionTitle {
@@ -26,11 +25,13 @@
 }
 
 .projectDetail {
-    background: white;
-    border-radius: var(--radius);
+    background: var(--color-card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 24px;
     padding: var(--spacing-xl);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--color-border);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .projectHeader {

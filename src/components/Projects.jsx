@@ -66,8 +66,11 @@ function Projects() {
                 'JWT Authentication'
             ],
             image: '/cmes-preview.jpg',
-            liveUrl: 'https://66jjn.github.io/',
-            githubUrl: 'https://github.com/66JJN'
+            liveUrls: [
+                { label: 'CMES-ADMIN', url: 'https://cmesadminfrontend.vercel.app/' },
+                { label: 'CMES-USER', url: 'https://cmesuserfrontend.vercel.app/' }
+            ],
+            githubUrl: 'https://github.com/66jjn'
         }
     ];
 
@@ -89,17 +92,34 @@ function Projects() {
                                     <p className={styles.projectSubtitle}>{project.subtitle}</p>
                                 </div>
                                 <div className={styles.projectLinks}>
-                                    <a
-                                        href={project.liveUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={styles.linkBtn}
-                                    >
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                        Live Demo
-                                    </a>
+                                    {project.liveUrls ? (
+                                        project.liveUrls.map((demo, demoIdx) => (
+                                            <a
+                                                key={demoIdx}
+                                                href={demo.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={styles.linkBtn}
+                                            >
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                </svg>
+                                                {demo.label}
+                                            </a>
+                                        ))
+                                    ) : project.liveUrl ? (
+                                        <a
+                                            href={project.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.linkBtn}
+                                        >
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                            Live Demo
+                                        </a>
+                                    ) : null}
                                     <a
                                         href={project.githubUrl}
                                         target="_blank"
