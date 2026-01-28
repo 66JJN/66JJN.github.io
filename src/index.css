@@ -1,9 +1,16 @@
 :root {
   /* Colors - Admin Dashboard Style */
-  --color-bg: linear-gradient(135deg, #667eea 25%, #764ba2 25%, #f093fb 25%, #4facfe 75%, #00f2fe 100%);
+  --color-bg: linear-gradient(
+    135deg,
+    #7f7cff 0%,
+    #8f8cff 25%,
+    #9aa5ff 45%,
+    #8fd3f4 70%,
+    #7bdff2 100%
+    );
   --color-text-primary: #1a1a2e;
-  --color-text-secondary: #4a4a6a;
-  --color-accent: #667eea;
+  --color-text-secondary: #29293b;
+  --color-accent: #3252df;
   --color-accent-dark: #402168;
   --color-border: rgba(255, 255, 255, 0.3);
   --color-card-bg: rgba(255, 255, 255, 0.95);
