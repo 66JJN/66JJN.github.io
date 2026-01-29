@@ -81,11 +81,16 @@
 .name {
     font-size: 3.5rem;
     font-weight: 800;
-    color: #fff;
     margin: 0;
-    line-height: 1.1;
+    line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+    background-size: 200% 200%;
 }
 
 .title {
