@@ -1,0 +1,80 @@
+/* ====================================
+   MOBILE HOVER FIX
+   Fix sticky hover states on touch devices
+   ==================================== */
+
+/* Remove hover effects on touch-only devices */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Disable all hover transforms and effects */
+    *:hover {
+        transform: none !important;
+        box-shadow: inherit !important;
+    }
+
+    /* Cards */
+    .projectDetail:hover,
+    .contactCard:hover,
+    .featureCard:hover,
+    .categoryCard:hover,
+    .problemCard:hover,
+    .stepCard:hover,
+    .interestCard:hover,
+    .focusCard:hover {
+        transform: none !important;
+    }
+
+    /* Buttons and links */
+    .linkBtn:hover,
+    .ctaPrimary:hover,
+    .ctaSecondary:hover,
+    button:hover,
+    a:hover {
+        transform: none !important;
+        scale: 1 !important;
+    }
+
+    /* Remove gradient borders on hover for touch */
+    *::before {
+        pointer-events: none !important;
+    }
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+    * {
+        /* Better tap highlighting */
+        -webkit-tap-highlight-color: rgba(102, 126, 234, 0.1);
+    }
+
+    /* Improve touch response */
+    button,
+    a,
+    [role="button"],
+    [class*="Btn"],
+    [class*="Card"] {
+        touch-action: manipulation;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    /* Use active state instead of hover */
+    button:active,
+    a:active,
+    [class*="Btn"]:active {
+        opacity: 0.7;
+        transition: opacity 0.15s ease;
+    }
+}
+
+/* Ensure minimum touch targets on mobile */
+@media (max-width: 768px) {
+
+    button,
+    a,
+    [class*="Btn"],
+    [role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}

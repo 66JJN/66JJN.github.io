@@ -96,6 +96,7 @@
     display: flex;
     gap: var(--spacing-sm);
     flex-shrink: 0;
+    flex-wrap: wrap;
 }
 
 .linkBtn {
@@ -262,14 +263,17 @@
     transition: opacity 0.4s ease;
 }
 
-.featureCard:hover::before {
-    opacity: 1;
-}
+/* Hover effects only for devices with mouse */
+@media (hover: hover) {
+    .featureCard:hover::before {
+        opacity: 1;
+    }
 
-.featureCard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.3);
-    border-color: transparent;
+    .featureCard:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(102, 126, 234, 0.3);
+        border-color: transparent;
+    }
 }
 
 .featureCategory {
@@ -310,15 +314,19 @@
 @media (max-width: 992px) {
     .projectHeader {
         flex-direction: column;
+        gap: var(--spacing-md);
     }
 
     .projectLinks {
         width: 100%;
+        justify-content: flex-start;
     }
 
     .linkBtn {
-        flex: 1;
-        justify-content: center;
+        flex: 0 1 auto;
+        font-size: 13px;
+        padding: 12px 16px;
+        min-height: 44px;
     }
 
     .responsibilitiesList {
@@ -327,6 +335,48 @@
 
     .featuresGrid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .projectDetail {
+        padding: var(--spacing-lg);
+    }
+
+    .projectTitle {
+        font-size: 22px;
+    }
+
+    .projectSubtitle {
+        font-size: 15px;
+    }
+
+    .linkBtn {
+        font-size: 12px;
+        padding: 10px 14px;
+        gap: 4px;
+    }
+
+    .linkBtn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .sectionTitle {
+        font-size: 18px;
+    }
+
+    .responsibilitiesSection,
+    .featuresSection {
+        padding: var(--spacing-md);
+    }
+
+    .featureCard {
+        padding: var(--spacing-sm);
     }
 }
 

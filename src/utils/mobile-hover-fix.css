@@ -1,0 +1,23 @@
+/* Global fix for hover states on touch devices */
+
+/* 
+  This file contains a utility class to disable hover effects on touch devices.
+  Apply this approach to all interactive elements to prevent sticky hover states.
+*/
+
+@media (hover: none) {
+
+    /* Remove all hover effects on touch devices */
+    * {
+        transition: none !important;
+    }
+}
+
+/* Alternative: Use @media (hover: hover) to wrap hover-specific styles */
+/* Example:
+@media (hover: hover) {
+  .element:hover {
+    transform: scale(1.05);
+  }
+}
+*/
