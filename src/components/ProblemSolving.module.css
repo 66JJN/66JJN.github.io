@@ -95,7 +95,7 @@
 }
 
 .learnedBox {
-    background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: var(--spacing-md);
     border-radius: 8px;
     border-left: 4px solid var(--color-accent);
@@ -105,7 +105,7 @@
 .learnedLabel {
     font-size: 15px;
     font-weight: 700;
-    color: var(--color-accent);
+    color: white;
     margin-bottom: var(--spacing-xs);
 }
 
