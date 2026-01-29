@@ -5,7 +5,7 @@ function Projects() {
     const projects = [
         {
             title: 'CMES - Content Management and Engagement System for Entertainment Venues',
-            subtitle: 'Full-Stack Developer | ธันวาคม 2025 - มกราคม 2026',
+            subtitle: 'Full-Stack Developer | มิถุนายน 2025 - กุมภาพันธ์ 2026',
             description: 'ระบบจัดการลูกค้าและการมีส่วนร่วมแบบ Real-time สำหรับร้านสถานบันเทิง ที่ช่วยให้ลูกค้าสามารถส่งข้อความ รูปภาพ และของขวัญผ่านระบบ พร้อมแสดงผลบนจอดิจิทัลแบบ Live ด้วย OBS Overlay',
             role: 'Front-End Developer Responsibilities',
             responsibilities: [
