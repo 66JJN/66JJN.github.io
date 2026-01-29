@@ -443,12 +443,6 @@
     animation: scrollLeft 40s linear infinite;
 }
 
-/* Pause animation on hover */
-.scrollContainer:hover .scrollTrackRight,
-.scrollContainer:hover .scrollTrackLeft {
-    animation-play-state: paused;
-}
-
 @keyframes scrollRight {
     0% {
         transform: translateX(0);
