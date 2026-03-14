@@ -129,7 +129,7 @@ const HeroNew = () => {
                 {/* Left Side - Text Content */}
                 <div className={styles.content}>
                     <div className={styles.badge}>
-                        <span className={styles.badgeIcon}>✨</span>
+                        <span className={styles.badgeIcon}>👋</span>
                         <span className={styles.badgeText}>สวัสดีครับ ผม</span>
                     </div>
 
