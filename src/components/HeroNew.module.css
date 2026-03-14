@@ -446,58 +446,34 @@
     padding: 1rem 0;
     margin-bottom: 1.5rem;
     cursor: grab;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollContainer::-webkit-scrollbar {
+    display: none;
 }
 
 .scrollContainer:active {
     cursor: grabbing;
 }
 
-/* Hide scrollbar but keep functionality */
-.scrollContainer::-webkit-scrollbar {
-    display: none;
+.scrollContainer.dragging {
+    cursor: grabbing;
+    user-select: none;
 }
 
-.scrollContainer {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+.scrollContainer.dragging .techLogo {
+    pointer-events: none;
 }
 
+.scrollTrack,
 .scrollTrackRight,
 .scrollTrackLeft {
     display: flex;
     gap: 1.5rem;
     width: fit-content;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     will-change: transform;
-}
-
-.scrollTrackRight {
-    animation: scrollRight 40s linear infinite;
-}
-
-.scrollTrackLeft {
-    animation: scrollLeft 40s linear infinite;
-}
-
-@keyframes scrollRight {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-33.333%);
-    }
-}
-
-@keyframes scrollLeft {
-    0% {
-        transform: translateX(-33.333%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
 }
 
 .logoSet {
@@ -510,7 +486,8 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 1rem 1.5rem;
+    padding: 0.875rem 1.25rem;
+    min-height: 56px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
@@ -529,26 +506,43 @@
 }
 
 .logoIcon {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logoIconEmoji {
-    font-size: 2rem;
-    min-width: 40px;
-    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    flex-shrink: 0;
 }
 
 .logoText {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
 }
 
 /* Responsive */
 @media (max-width: 968px) {
+    .hero {
+        padding-top: 100px;
+    }
+
     .container {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     .imageSection {
@@ -556,7 +550,7 @@
     }
 
     .imageContainer {
-        max-width: 350px;
+        max-width: 300px;
     }
 
     .name {
@@ -574,7 +568,7 @@
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 60px;
+        padding-top: 80px;
     }
 
     .container {

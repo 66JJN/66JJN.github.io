@@ -23,7 +23,7 @@ function Footer() {
                                 GitHub
                             </a>
                             <a
-                                href="https://mail.google.com/mail/?view=cm&to=pyaksda@gmail.com"
+                                href="mailto:pyaksda@gmail.com"
                                 className={styles.link}
                             >
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={styles.linkIcon}>

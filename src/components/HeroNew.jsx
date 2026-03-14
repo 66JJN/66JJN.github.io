@@ -1,3 +1,4 @@
+import { useRef, useEffect, useCallback } from 'react'
 import styles from './HeroNew.module.css'
 
 const HeroNew = () => {
@@ -25,6 +26,102 @@ const HeroNew = () => {
         { name: 'Multer', text: 'ML' },
         { name: 'Node-cron', text: 'CR' },
     ]
+
+    // Row state refs (position, raf, speed, elements)
+    const row1 = useRef({ track: null, container: null, pos: 0, raf: null, speed: -0.5 })
+    const row2 = useRef({ track: null, container: null, pos: 0, raf: null, speed: 0.5 })
+
+    // Drag state
+    const drag = useRef({ active: false, startX: 0, startPos: 0, row: null })
+
+    // Get width of one logo set (track has 3 identical copies)
+    const getSetWidth = (trackEl) => {
+        if (!trackEl) return 0
+        return trackEl.scrollWidth / 3
+    }
+
+    // Wrap position to stay within [-setWidth, 0] for seamless infinite loop
+    const wrapPos = (pos, setWidth) => {
+        if (setWidth <= 0) return pos
+        let p = pos % setWidth
+        if (p > 0) p -= setWidth
+        return p
+    }
+
+    // Auto-scroll using requestAnimationFrame
+    const animate = useCallback((rowRef) => {
+        const row = rowRef.current
+        if (!row.track) return
+
+        const setWidth = getSetWidth(row.track)
+        row.pos = wrapPos(row.pos + row.speed, setWidth)
+        row.track.style.transform = `translateX(${row.pos}px)`
+
+        row.raf = requestAnimationFrame(() => animate(rowRef))
+    }, [])
+
+    const startScroll = useCallback((rowRef) => {
+        cancelAnimationFrame(rowRef.current.raf)
+        animate(rowRef)
+    }, [animate])
+
+    const stopScroll = (rowRef) => {
+        cancelAnimationFrame(rowRef.current.raf)
+        rowRef.current.raf = null
+    }
+
+    // Initialize positions and start auto-scroll
+    useEffect(() => {
+        // Row 2 starts offset so it scrolls in opposite direction visually
+        if (row2.current.track) {
+            row2.current.pos = -getSetWidth(row2.current.track)
+        }
+        startScroll(row1)
+        startScroll(row2)
+        return () => {
+            stopScroll(row1)
+            stopScroll(row2)
+        }
+    }, [startScroll])
+
+    // Drag handlers
+    const handleMouseDown = useCallback((e, rowRef) => {
+        stopScroll(rowRef)
+        drag.current = {
+            active: true,
+            startX: e.clientX,
+            startPos: rowRef.current.pos,
+            row: rowRef,
+        }
+        rowRef.current.container?.classList.add(styles.dragging)
+        e.preventDefault()
+    }, [])
+
+    const handleMouseMove = useCallback((e, rowRef) => {
+        const d = drag.current
+        if (!d.active || d.row !== rowRef) return
+
+        const track = rowRef.current.track
+        if (!track) return
+
+        const diff = e.clientX - d.startX
+        const setWidth = getSetWidth(track)
+        const newPos = wrapPos(d.startPos + diff, setWidth)
+
+        rowRef.current.pos = newPos
+        track.style.transform = `translateX(${newPos}px)`
+    }, [])
+
+    const handleMouseUp = useCallback((rowRef) => {
+        const d = drag.current
+        if (!d.active || d.row !== rowRef) return
+
+        d.active = false
+        rowRef.current.container?.classList.remove(styles.dragging)
+
+        // Resume auto-scroll from current position (NOT resetting)
+        startScroll(rowRef)
+    }, [startScroll])
 
     return (
         <section className={styles.hero} id="hero">
@@ -77,13 +174,22 @@ const HeroNew = () => {
             <div className={styles.bgEffect1}></div>
             <div className={styles.bgEffect2}></div>
 
-            {/* Tech Stack Scrolling Section - Moved to Bottom */}
+            {/* Tech Stack Scrolling Section */}
             <div className={styles.techStackSection}>
 
-                {/* Row 1 - Scroll Right */}
-                <div className={styles.scrollContainer}>
-                    <div className={styles.scrollTrackRight}>
-                        {/* Duplicate for seamless loop */}
+                {/* Row 1 - auto scroll left */}
+                <div
+                    className={styles.scrollContainer}
+                    ref={el => { row1.current.container = el }}
+                    onMouseDown={e => handleMouseDown(e, row1)}
+                    onMouseMove={e => handleMouseMove(e, row1)}
+                    onMouseUp={() => handleMouseUp(row1)}
+                    onMouseLeave={() => handleMouseUp(row1)}
+                >
+                    <div
+                        className={styles.scrollTrack}
+                        ref={el => { row1.current.track = el }}
+                    >
                         {[...Array(3)].map((_, setIndex) => (
                             <div key={setIndex} className={styles.logoSet}>
                                 {techStack1.map((tech, index) => (
@@ -101,10 +207,19 @@ const HeroNew = () => {
                     </div>
                 </div>
 
-                {/* Row 2 - Scroll Left */}
-                <div className={styles.scrollContainer}>
-                    <div className={styles.scrollTrackLeft}>
-                        {/* Duplicate for seamless loop */}
+                {/* Row 2 - auto scroll right */}
+                <div
+                    className={styles.scrollContainer}
+                    ref={el => { row2.current.container = el }}
+                    onMouseDown={e => handleMouseDown(e, row2)}
+                    onMouseMove={e => handleMouseMove(e, row2)}
+                    onMouseUp={() => handleMouseUp(row2)}
+                    onMouseLeave={() => handleMouseUp(row2)}
+                >
+                    <div
+                        className={styles.scrollTrack}
+                        ref={el => { row2.current.track = el }}
+                    >
                         {[...Array(3)].map((_, setIndex) => (
                             <div key={setIndex} className={styles.logoSet}>
                                 {techStack2.map((tech, index) => (
