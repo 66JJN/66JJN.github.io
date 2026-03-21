@@ -112,7 +112,7 @@
 .skillItem:hover {
     border-left-color: var(--color-accent);
     transform: translateX(4px);
-    background: #000000;
+    background: linear-gradient(135deg, #30439b 0%, #764ba2 50%, #f093fb 100%);
 }
 
 .skillHeader {
@@ -143,6 +143,10 @@
     color: var(--color-text-secondary);
     margin: 0;
     padding-left: 16px;
+}
+
+.skillItem:hover .skillDetail {
+    color: var(--color-text-primary);
 }
 
 /* Responsive */
