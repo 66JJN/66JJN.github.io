@@ -1,8 +1,9 @@
 .app {
   min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
   position: relative;
+  transition: background 0.4s ease;
 }
 
 /* Smooth transitions between sections */
@@ -27,7 +28,8 @@ section {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
-  opacity: 0.12;
+  opacity: var(--blob-opacity);
+  transition: opacity 0.4s ease;
 }
 
 .globalBgEffect1 {

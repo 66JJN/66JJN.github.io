@@ -100,7 +100,7 @@
 }
 
 .skillItem {
-    background: rgba(34, 34, 39, 1);
+    background: var(--skill-item-bg);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     padding: var(--spacing-sm) var(--spacing-md);

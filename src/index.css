@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Color Palette - Dark Theme */
+  /* Color Palette - Dark Theme (default) */
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
   --bg-dark: #0a0a0f;
@@ -22,6 +22,39 @@
   --color-accent-dark: #764ba2;
   --color-border: rgba(255, 255, 255, 0.1);
   --color-card-bg: rgba(255, 255, 255, 0.05);
+
+  /* Theme-aware variables */
+  --bg-gradient-start: #0a0a0f;
+  --bg-gradient-end: #1a1a2e;
+  --navbar-bg: rgba(10, 10, 15, 0.8);
+  --navbar-bg-mobile: rgba(10, 10, 15, 0.98);
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --hamburger-color: rgba(255, 255, 255, 0.8);
+  --hamburger-hover-bg: rgba(255, 255, 255, 0.1);
+  --nav-link-color: rgba(255, 255, 255, 0.7);
+  --nav-link-hover-bg: rgba(255, 255, 255, 0.05);
+  --nav-link-hover-bg-mobile: rgba(102, 126, 234, 0.15);
+  --skill-item-bg: rgba(34, 34, 39, 1);
+  --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --footer-text: white;
+  --footer-text-secondary: rgba(255, 255, 255, 0.7);
+  --footer-text-muted: rgba(255, 255, 255, 0.6);
+  --footer-link-bg: rgba(255, 255, 255, 0.1);
+  --footer-link-border: rgba(255, 255, 255, 0.2);
+  --footer-link-hover-bg: rgba(255, 255, 255, 0.2);
+  --footer-link-hover-border: rgba(255, 255, 255, 0.4);
+  --footer-divider: rgba(255, 255, 255, 0.2);
+  --footer-copyright: rgba(255, 255, 255, 0.9);
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --sidebar-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  --blob-opacity: 0.12;
+  --whyfrontend-border: rgba(255, 255, 255, 0.7);
+
+  /* Tech logo cards - always dark */
+  --tech-logo-bg: rgba(255, 255, 255, 0.05);
+  --tech-logo-border: rgba(255, 255, 255, 0.1);
+  --tech-logo-text: rgba(255, 255, 255, 0.8);
+  --tech-logo-hover-bg: rgba(255, 255, 255, 0.1);
 
   /* Spacing - Desktop */
   --spacing-xs: 8px;
@@ -44,6 +77,60 @@
 
   /* Touch targets - minimum size for mobile */
   --touch-target-min: 44px;
+}
+
+/* ===== Light Theme ===== */
+[data-theme="light"] {
+  --bg-dark: #f0f0f8;
+  --bg-secondary: #e0e0ee;
+  --text-primary: #1a1a2e;
+  --text-secondary: rgba(26, 26, 46, 0.7);
+  --text-muted: rgba(26, 26, 46, 0.5);
+
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(0, 0, 0, 0.08);
+
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: rgba(26, 26, 46, 0.7);
+  --color-accent: #5a6fd6;
+  --color-accent-dark: #6a4299;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-card-bg: rgba(255, 255, 255, 0.7);
+
+  --bg-gradient-start: #e8e8f4;
+  --bg-gradient-end: #f0f0f8;
+  --navbar-bg: rgba(240, 240, 248, 0.85);
+  --navbar-bg-mobile: rgba(240, 240, 248, 0.98);
+  --navbar-border: rgba(0, 0, 0, 0.08);
+  --hamburger-color: rgba(26, 26, 46, 0.7);
+  --hamburger-hover-bg: rgba(0, 0, 0, 0.05);
+  --nav-link-color: rgba(26, 26, 46, 0.7);
+  --nav-link-hover-bg: rgba(0, 0, 0, 0.05);
+  --nav-link-hover-bg-mobile: rgba(102, 126, 234, 0.1);
+  --skill-item-bg: rgba(255, 255, 255, 0.8);
+  --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
+  --footer-text: #1a1a2e;
+  --footer-text-secondary: rgba(26, 26, 46, 0.7);
+  --footer-text-muted: rgba(26, 26, 46, 0.5);
+  --footer-link-bg: rgba(0, 0, 0, 0.05);
+  --footer-link-border: rgba(0, 0, 0, 0.1);
+  --footer-link-hover-bg: rgba(0, 0, 0, 0.1);
+  --footer-link-hover-border: rgba(0, 0, 0, 0.2);
+  --footer-divider: rgba(0, 0, 0, 0.1);
+  --footer-copyright: rgba(26, 26, 46, 0.9);
+  --overlay-bg: rgba(0, 0, 0, 0.3);
+  --sidebar-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+  --blob-opacity: 0.08;
+  --whyfrontend-border: rgba(0, 0, 0, 0.1);
+
+  /* Tech logo cards - keep dark style */
+  --tech-logo-bg: rgba(30, 30, 50, 0.85);
+  --tech-logo-border: rgba(100, 100, 150, 0.25);
+  --tech-logo-text: rgba(255, 255, 255, 0.85);
+  --tech-logo-hover-bg: rgba(40, 40, 65, 0.9);
 }
 
 /* Mobile spacing adjustments */
@@ -87,6 +174,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 @keyframes gradientShift {

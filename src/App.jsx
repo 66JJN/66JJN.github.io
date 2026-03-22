@@ -1,4 +1,5 @@
 import './App.css'
+import { ThemeProvider } from './contexts/ThemeContext'
 import { LanguageProvider } from './contexts/LanguageContext'
 import Navbar from './components/Navbar'
 import HeroNew from './components/HeroNew'
@@ -13,42 +14,44 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <LanguageProvider>
-      <div className="app">
-        {/* Global Background Layer */}
-        <div className="globalBgLayer">
-          <div className="globalBgEffect globalBgEffect1"></div>
-          <div className="globalBgEffect globalBgEffect2"></div>
-          <div className="globalBgEffect globalBgEffect3"></div>
-          <div className="globalBgEffect globalBgEffect4"></div>
-        </div>
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className="app">
+          {/* Global Background Layer */}
+          <div className="globalBgLayer">
+            <div className="globalBgEffect globalBgEffect1"></div>
+            <div className="globalBgEffect globalBgEffect2"></div>
+            <div className="globalBgEffect globalBgEffect3"></div>
+            <div className="globalBgEffect globalBgEffect4"></div>
+          </div>
 
-        <Navbar />
-        <HeroNew />
-        <div id="why-frontend">
-          <WhyFrontend />
+          <Navbar />
+          <HeroNew />
+          <div id="why-frontend">
+            <WhyFrontend />
+          </div>
+          <div id="tech-stack">
+            <TechStack />
+          </div>
+          <div id="projects">
+            <Projects />
+          </div>
+          <div id="problem-solving">
+            <ProblemSolving />
+          </div>
+          <div id="about">
+            <About />
+          </div>
+          <div id="learning">
+            <Learning />
+          </div>
+          <div id="contact">
+            <Contact />
+          </div>
+          <Footer />
         </div>
-        <div id="tech-stack">
-          <TechStack />
-        </div>
-        <div id="projects">
-          <Projects />
-        </div>
-        <div id="problem-solving">
-          <ProblemSolving />
-        </div>
-        <div id="about">
-          <About />
-        </div>
-        <div id="learning">
-          <Learning />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
-        <Footer />
-      </div>
-    </LanguageProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
 
