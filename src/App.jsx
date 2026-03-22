@@ -15,6 +15,14 @@ function App() {
   return (
     <LanguageProvider>
       <div className="app">
+        {/* Global Background Layer */}
+        <div className="globalBgLayer">
+          <div className="globalBgEffect globalBgEffect1"></div>
+          <div className="globalBgEffect globalBgEffect2"></div>
+          <div className="globalBgEffect globalBgEffect3"></div>
+          <div className="globalBgEffect globalBgEffect4"></div>
+        </div>
+
         <Navbar />
         <HeroNew />
         <div id="why-frontend">

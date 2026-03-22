@@ -4,9 +4,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    overflow: hidden;
     padding-top: 80px;
-    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
 }
 
 .container {

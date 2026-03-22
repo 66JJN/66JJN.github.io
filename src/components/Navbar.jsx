@@ -25,7 +25,7 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.container}>
-                <div className={styles.logo}>
+                <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
                     <span className={styles.logoText}>PORTFOLIO</span>
                 </div>
 
