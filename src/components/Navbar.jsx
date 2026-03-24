@@ -27,10 +27,6 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.container}>
-                <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
-                    <span className={styles.logoText}>PORTFOLIO</span>
-                </div>
-
                 {/* Hamburger Button */}
                 <button
                     className={`${styles.hamburger} ${menuOpen ? styles.hamburgerActive : ''}`}
@@ -41,6 +37,10 @@ const Navbar = () => {
                     <span></span>
                     <span></span>
                 </button>
+
+                <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
+                    <span className={styles.logoText}>PORTFOLIO</span>
+                </div>
 
                 {/* Nav Links */}
                 <div className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ''}`}>
