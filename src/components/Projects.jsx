@@ -67,12 +67,12 @@ function Projects() {
             ],
             image: '/cmes-preview.jpg',
             liveUrls: [
-                { label: 'CMES-ADMIN', url: 'https://cmesadminfrontend.vercel.app/' },
-                { label: 'CMES-USER', url: 'https://cmesuserfrontend.vercel.app/?shopId=KAIYANG' }
+                { label: 'CMES-ADMIN', url: 'https://cmes-admin-frontend.vercel.app/' },
+                { label: 'CMES-USER', url: 'https://cmes-user-frontend.vercel.app/?shopId=JJ' }
             ],
             githubUrls: [
-                { label: 'CMES-ADMIN', url: 'https://github.com/Boriwat-wtm/CMES-ADMIN' },
-                { label: 'CMES-USER', url: 'https://github.com/Boriwat-wtm/CMES-USER' }
+                { label: 'CMES-ADMIN', url: 'https://github.com/66JJN/CMES-ADMIN' },
+                { label: 'CMES-USER', url: 'https://github.com/66JJN/CMES-USER' }
             ]
         }
     ];
