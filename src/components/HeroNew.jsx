@@ -11,20 +11,22 @@ const HeroNew = () => {
         { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
         { name: 'Express', icon: 'devicon-express-original' },
         { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
+        { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-original colored' },
         { name: 'Git', icon: 'devicon-git-plain colored' },
         { name: 'GitHub', icon: 'devicon-github-original' },
     ]
 
     const techStack2 = [
-        { name: 'Axios', icon: 'devicon-axios-plain colored' },
+        { name: 'Gemini AI', text: 'AI' },
+        { name: 'Sightengine', text: 'SE' },
         { name: 'Socket.IO', icon: 'devicon-socketio-original' },
-        { name: 'Mongoose', text: 'MG' },
+        { name: 'Cloudinary', text: 'CL' },
         { name: 'JWT', text: 'JWT' },
         { name: 'Bcrypt', text: 'BC' },
-        { name: 'OBS Studio', text: 'OBS' },
-        { name: 'Tesseract.js', text: 'TS' },
-        { name: 'Multer', text: 'ML' },
+        { name: 'Tesseract', text: 'TS' },
         { name: 'Node-cron', text: 'CR' },
+        { name: 'Vercel', icon: 'devicon-vercel-original' },
+        { name: 'Render', text: 'RD' },
     ]
 
     // Row state refs (position, raf, speed, elements)

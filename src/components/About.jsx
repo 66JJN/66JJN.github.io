@@ -6,7 +6,7 @@ function About() {
             <div className="container">
                 <h2 className={styles.sectionTitle}>เกี่ยวกับผม</h2>
                 <p className={styles.sectionSubtitle}>
-                    ประวัติการศึกษาและแนวคิดในการทำงาน
+                    จาก Front-End สู่ Full-Stack Development และการบูรณาการ AI
                 </p>
 
                 <div className={styles.content}>
@@ -42,31 +42,28 @@ function About() {
                     <div className={styles.interests}>
                         <div className={styles.interestCard}>
                             <span className={styles.cardIcon}>💻</span>
-                            <h3 className={styles.cardTitle}>ความสนใจด้าน Front-End</h3>
+                            <h3 className={styles.cardTitle}>Full-Stack & AI Integration</h3>
                             <p className={styles.cardText}>
-                                สนใจในการสร้าง User Interface ที่สวยงามและใช้งานง่าย
-                                ชอบเรียนรู้เทคโนโลยีใหม่ๆ และติดตามเทรนด์ด้าน Web Development
-                                อยู่เสมอ
+                                พัฒนาทักษะจาก Front-End สู่ Full-Stack ด้วย Node.js และ MongoDB 
+                                พร้อมทั้งบูรณาการ AI APIs เช่น Gemini และ Sightengine ในการสร้างนวัตกรรมใหม่ๆ
                             </p>
                         </div>
 
                         <div className={styles.interestCard}>
                             <span className={styles.cardIcon}>🚀</span>
-                            <h3 className={styles.cardTitle}>แนวคิดในการเรียนรู้</h3>
+                            <h3 className={styles.cardTitle}>Modern Web Architecture</h3>
                             <p className={styles.cardText}>
-                                เชื่อในการเรียนรู้ด้วยตนเองและการลงมือทำจริง สร้างโปรเจกต์ส่วนตัว
-                                เพื่อฝึกฝนทักษะ อ่านบทความและ documentation ของเทคโนโลยีต่างๆ
-                                เพื่อพัฒนาตนเองอย่างต่อเนื่อง
+                                ให้ความสำคัญกับความเร็ว (Performance) และการทำงานแบบ Real-time (Socket.IO) 
+                                รวมถึงการทำ CI/CD ด้วย Vercel และ Render เพื่อความรวดเร็วในการส่งมอบงาน
                             </p>
                         </div>
 
                         <div className={styles.interestCard}>
                             <span className={styles.cardIcon}>🎯</span>
-                            <h3 className={styles.cardTitle}>เป้าหมาย</h3>
+                            <h3 className={styles.cardTitle}>Continuous Learning</h3>
                             <p className={styles.cardText}>
-                                มุ่งหวังที่จะเป็น Front-End Developer ที่มีความสามารถ
-                                พร้อมเรียนรู้จากทีมงานมืออาชีพและสร้างสรรค์ผลงานที่มีคุณภาพ
-                                ที่ช่วยแก้ปัญหาให้ผู้ใช้งานได้จริง
+                                เชื่อในการเรียนรู้ตลอดชีวิต (Life-long Learning) ศึกษาเทคโนโลยีใหม่ๆ 
+                                และปรับตัวให้ทันกับโลกของ AI และ Software Development อยู่เสมอ
                             </p>
                         </div>
                     </div>

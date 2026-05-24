@@ -41,6 +41,14 @@ function ProblemSolving() {
             cause: 'State update และ database update ไม่ทำพร้อมกัน และไม่มีการตรวจสอบ duplicate ก่อนบันทึก history',
             solution: 'ปรับให้ Backend update database ก่อน emit Socket event และเพิ่ม unique constraint + check duplicate ก่อน insert history',
             learned: 'การออกแบบ data flow ที่ถูกต้องระหว่าง Frontend-Backend-Database และความสำคัญของ data validation'
+        },
+        {
+            title: 'AI Integration: การ Moderation และ Slip Verification',
+            emoji: '🤖',
+            problem: 'การกรองรูปภาพที่ไม่เหมาะสม (Adult/Violence) และการตรวจสอบความถูกต้องของสลิปโอนเงินจำนวนมากเป็นเรื่องยากหากต้องใช้คนตรวจสอบทั้งหมด',
+            cause: 'ระบบต้องการความรวดเร็วและความแม่นยำสูง (Real-time) เพื่อให้แอปพลิเคชันทำงานได้โดยไม่ต้องรอนาน',
+            solution: 'บูรณาการ Sightengine API สำหรับ Content Moderation แบบ Real-time และใช้ Tesseract.js (OCR) สำหรับตรวจสอบจำนวนเงินในสลิปโดยอัตโนมัติ',
+            learned: 'การทำงานกับ AI-based APIs, การจัดการ asynchronous tasks ระหว่างรอผลลัพธ์จาก AI และการทำ Data Cleaning สำหรับ OCR output'
         }
     ];
 

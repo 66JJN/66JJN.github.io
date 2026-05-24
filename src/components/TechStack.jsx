@@ -19,38 +19,42 @@ function TechStack() {
             description: 'จัดการข้อมูลและ State ให้ sync กับ UI อย่างมีประสิทธิภาพ',
             skills: [
                 { name: 'React Hooks', detail: 'useState, useEffect สำหรับจัดการ lifecycle' },
-                { name: 'Local Storage', detail: 'เก็บข้อมูลบน browser เพื่อใช้งานต่อเนื่อง' },
-                { name: 'REST API', detail: 'เชื่อมต่อ Backend และดึงข้อมูลผ่าน Fetch/Axios' }
+                 { name: 'Local Storage', detail: 'เก็บข้อมูลบน browser เพื่อใช้งานต่อเนื่อง' },
+                { name: 'Axios', detail: 'เชื่อมต่อ Backend และดึงข้อมูลผ่าน REST API อย่างมีประสิทธิภาพ' },
+                { name: 'State Management', detail: 'จัดการข้อมูลที่ซับซ้อนให้ UI sync กับ Database' }
             ]
         },
         {
-            title: 'Real-time Communication',
-            icon: '⚡',
-            description: 'ทำงานกับข้อมูลแบบ Real-time และอัปเดต UI ทันที',
+            title: 'AI & Cloud Services',
+            icon: '🤖',
+            description: 'บูรณาการ AI และบริการ Cloud เพื่อเพิ่มขีดความสามารถของระบบ',
             skills: [
-                { name: 'Socket.IO', detail: 'รับส่งข้อมูลแบบ Real-time ผ่าน WebSocket' },
-                { name: 'WebSocket', detail: 'Two-way communication สำหรับ live updates' }
+                { name: 'Google Gemini AI', detail: 'สร้างระบบอัตโนมัติด้วย AI (Image Analysis & Generative Content)' },
+                { name: 'Sightengine API', detail: 'ระบบ Content Moderation กรองรูปภาพที่ไม่เหมาะสมแบบ Real-time' },
+                { name: 'Cloudinary', detail: 'จัดการ Media Assets และทำ Image Optimization บน Cloud' },
+                { name: 'Vercel / Render', detail: 'การทำ CI/CD และการ Deployment ทั้ง Frontend และ Backend' }
             ]
         },
         {
-            title: 'UI/UX & Responsive',
-            icon: '🎨',
-            description: 'ออกแบบ Interface ที่สวยงามและใช้งานได้ทุกอุปกรณ์',
+            title: 'Backend & Security',
+            icon: '🔐',
+            description: 'พัฒนา Backend ที่ปลอดภัยและมีประสิทธิภาพในการจัดการข้อมูล',
             skills: [
-                { name: 'Responsive Design', detail: 'Mobile-first approach และ breakpoints' },
-                { name: 'CSS Modules', detail: 'Scoped styling เพื่อหลีกเลี่ยง naming conflicts' },
-                { name: 'Flexbox & Grid', detail: 'Layout modern ที่ยืดหยุ่นและใช้งานง่าย' }
+                { name: 'Node.js & Express', detail: 'สร้าง RESTful API และจัดการ Middleware' },
+                { name: 'MongoDB & Mongoose', detail: 'ออกแบบ Schema และจัดการฐานข้อมูล NoSQL' },
+                { name: 'JWT & Bcrypt', detail: 'ระบบ Authentication ที่ปลอดภัยและกึ่งสำเร็จรูป' },
+                { name: 'Nodemailer', detail: 'ระบบ Email Verification (OTP) และการแจ้งเตือน' }
             ]
         },
         {
-            title: 'Tools & Workflow',
+            title: 'CI/CD & Workflow',
             icon: '🛠️',
-            description: 'เครื่องมือที่ช่วยเพิ่มประสิทธิภาพในการพัฒนา',
+            description: 'เครื่องมือที่ช่วยเพิ่มประสิทธิภาพในการพัฒนาและส่งมอบงาน',
             skills: [
-                { name: 'Git & GitHub', detail: 'Version control และ collaboration' },
-                { name: 'Vite', detail: 'Fast build tool และ hot reload' },
-                { name: 'VS Code', detail: 'Code editor พร้อม extensions' },
-                { name: 'npm', detail: 'Package management และ scripts' }
+                { name: 'Git & GitHub', detail: 'Version control และการทำงานร่วมกันเป็นทีม' },
+                { name: 'Node-cron', detail: 'การตั้งเวลาทำงานของ Scripts อัตโนมัติ (Task Scheduling)' },
+                { name: 'Vite', detail: 'Modern build tool สำหรับความเร็วในการพัฒนา' },
+                { name: 'Postman', detail: 'การทดสอบและจำลอง API สำหรับการพัฒนา' }
             ]
         }
     ];

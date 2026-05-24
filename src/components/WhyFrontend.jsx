@@ -58,6 +58,14 @@ function WhyFrontend() {
                                     สร้าง UI ที่ทำงานได้ดีบนทุกอุปกรณ์ ตั้งแต่มือถือไปจนถึง Desktop
                                 </p>
                             </div>
+
+                            <div className={styles.focusCard}>
+                                <span className={styles.focusIcon}>🤖</span>
+                                <h4 className={styles.focusName}>AI Integration</h4>
+                                <p className={styles.focusDesc}>
+                                    เพิ่มขีดความสามารถของเว็บไซต์ด้วย AI เพื่อสร้างประสบการณ์ที่ล้ำสมัย
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
