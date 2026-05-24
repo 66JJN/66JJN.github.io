@@ -7,63 +7,66 @@ function Projects() {
             title: 'CMES - Content Management and Engagement System for Entertainment Venues',
             subtitle: 'Full-Stack Developer | มิถุนายน 2025 - กุมภาพันธ์ 2026',
             description: 'ระบบจัดการลูกค้าและการมีส่วนร่วมแบบ Real-time สำหรับร้านสถานบันเทิง ที่ช่วยให้ลูกค้าสามารถส่งข้อความ รูปภาพ และของขวัญผ่านระบบ พร้อมแสดงผลบนจอดิจิทัลแบบ Live ด้วย OBS Overlay',
-            role: 'Front-End Developer Responsibilities',
+            role: 'Full-Stack Developer | Lead Front-End Responsibilities',
             responsibilities: [
-                'ออกแบบและพัฒนา UI/UX ด้วย React.js (Hooks: useState, useEffect, useContext)',
-                'สร้าง Responsive Design รองรับทุกอุปกรณ์ (Mobile-First Approach)',
-                'จัดการ State ที่ซับซ้อนสำหรับ Real-time Queue System',
-                'เชื่อมต่อ Backend ผ่าน REST API ด้วย Axios',
-                'ทำงานกับ Socket.IO Client สำหรับ Real-time Updates',
-                'สร้าง Protected Routes และ Authentication Flow',
-                'Upload และแสดงผลรูปภาพ (Image Preview, Validation)',
-                'พัฒนา OBS Overlay สำหรับแสดง QR Code และ Countdown Timer'
+                'ออกแบบและพัฒนา UI/UX ระดับ Premium ด้วย Glassmorphism Design System',
+                'บูรณาการ AI Gemini API สำหรับระบบอัตโนมัติ (Captioning & Content Generation)',
+                'พัฒนาระบบตรวจสอบภาพถ่ายด้วย OCR (Tesseract.js) เพื่อยืนยันการชำระเงินอัตโนมัติ',
+                'จัดการ State และ Real-time Synchronization ผ่าน Socket.IO สำหรับ Queue System',
+                'ออกแบบ Responsive Layout แบบรองรับทุกอุปกรณ์ (Mobile-First & Interactive Design)',
+                'สร้าง Dynamic Dashboard สำหรับรายงานรายได้พร้อมระบบกรองข้อมูลอัจฉริยะ',
+                'พัฒนาระบบ Authentication และ Security Flow ด้วย JWT & MongoDB',
+                'จัดการ Media Assets ผ่าน Cloudinary พร้อมระบบ Image Optimization',
+                'สร้างและออกแบบ OBS Overlay สำหรับการแสดงผลข้อมูลแบบสด (Live Streaming Display)'
             ],
             features: [
                 {
+                    category: 'AI & Machine Learning Integration',
+                    items: [
+                        'AI Caption Generation: ใช้ Google Gemini API (Flash 2.5/2.0) วิเคราะห์รูปภาพและสร้างแคปชั่นสไตล์ Gen Z อัตโนมัติ',
+                        'AI Slip Verification: ระบบตรวจสอบสลิปโอนเงินอัตโนมัติด้วย Tesseract.js (OCR) รองรับภาษาไทย/อังกฤษ',
+                        'Image Content Filtering: กรองและตรวจสอบความเหมาะสมของรูปภาพเบื้องต้นก่อนขึ้นจอ',
+                        'Advanced Prompt Engineering: ออกแบบคำสั่งเพื่อให้ AI ตอบสนองตามบริบทของร้านสถานบันเทิง'
+                    ]
+                },
+                {
                     category: 'Authentication & User Management',
                     items: [
-                        'Login/Register System ด้วย JWT Authentication',
-                        'Protected Routes ป้องกันการเข้าถึงโดยไม่ได้ Login',
-                        'User Profile Management (แก้ไขข้อมูล, อัพโหลดรูป)',
-                        'Email Verification System (OTP)'
+                        'Login/Register System ด้วย JWT Authentication & MongoDB',
+                        'Email Verification System (OTP) สำหรับความปลอดภัยในการสมัครสมาชิก',
+                        'User Profile Customization: อัปโหลดรูปโปรไฟล์ แสดงผลแบบ Real-time',
+                        'Protected Routes และ Session Management'
                     ]
                 },
                 {
-                    category: 'Real-time Queue System',
+                    category: 'Admin Dashboard & Analytics',
                     items: [
-                        'แสดงคิวแบบ Real-time บน OBS Overlay',
-                        'QR Code Generation และแสดงผลพร้อมข้อความ',
-                        'Countdown Timer แบบ Real-time',
-                        'จัดการสถานะคิว: Pending → Playing → Completed',
-                        'Real-time updates ผ่าน Socket.IO'
+                        'Dynamic Income Statistics: รายงานรายได้พร้อมระบบกรองวันที่แบบละเอียด (Persistent Date Range)',
+                        'Glassmorphism UI: ดีไซน์หน้า Admin ให้ทันสมัยด้วยเอฟเฟกต์โปร่งแสงและ SVG Icons',
+                        'Queue Management: ระบบจัดการคิวอัจฉริยะ (Pending, Playing, Completed) พร้อมประวัติการทำงาน',
+                        'System Configuration: ปรับเปลี่ยนค่าตั้งค่าของระบบได้ทันทีโดยไม่ต้อง Restart'
                     ]
                 },
                 {
-                    category: 'Gift Order & Payment',
+                    category: 'Real-time Experience (User & OBS)',
                     items: [
-                        'เลือกและสั่งซื้อของขวัญหลายรายการ',
-                        'คำนวณราคารวมอัตโนมัติ',
-                        'Upload สลิปโอนเงิน พร้อม Preview',
-                        'ระบุโต๊ะปลายทางและข้อความ',
-                        'ตรวจสอบสถานะการชำระเงิน'
-                    ]
-                },
-                {
-                    category: 'Ranking & Leaderboard',
-                    items: [
-                        'แสดง Top 10 Ranking แบบ Real-time',
-                        'แยก Ranking: All-time, Daily, Monthly',
-                        'VIP Supporter Badge System',
+                        'Toast Notification System: ระบบแจ้งเตือนแบบ Glassmorphism แทนการใช้ alert() แบบเดิม',
+                        'Real-time Queue Status บน OBS Overlay และ User Interface ผ่าน Socket.IO',
+                        'Multi-item Status Tracking: ติดตามสถานะการสั่งของขวัญพร้อมกันหลายรายการ',
+                        'Micro-interactions: เพิ่มลูกเล่นและ Animation ให้ UI ดูลื่นไหลและพรีเมียม'
                     ]
                 }
             ],
             techStack: [
                 'React.js',
-                'Socket.IO Client',
-                'Axios',
-                'CSS3 Animations',
-                'Responsive Design',
-                'JWT Authentication'
+                'Google Gemini AI',
+                'Tesseract.js (OCR)',
+                'Socket.IO',
+                'MongoDB / Mongoose',
+                'Express.js / Node.js',
+                'Cloudinary Storage',
+                'Glassmorphism CSS',
+                'SVG Icons (Lucide/Custom)'
             ],
             image: '/cmes-preview.jpg',
             liveUrls: [
