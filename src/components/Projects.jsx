@@ -12,11 +12,12 @@ function Projects() {
                 'ออกแบบและพัฒนา UI/UX ระดับ Premium ด้วย Glassmorphism Design System',
                 'บูรณาการ AI Gemini API สำหรับระบบอัตโนมัติ (Captioning & Content Generation)',
                 'พัฒนาระบบตรวจสอบภาพถ่ายด้วย OCR (Tesseract.js) เพื่อยืนยันการชำระเงินอัตโนมัติ',
+                'เพิ่มระบบ Content Moderation แบบ Real-time ด้วย Sightengine API เพื่อกรองสื่อที่ไม่เหมาะสม',
                 'จัดการ State และ Real-time Synchronization ผ่าน Socket.IO สำหรับ Queue System',
                 'ออกแบบ Responsive Layout แบบรองรับทุกอุปกรณ์ (Mobile-First & Interactive Design)',
                 'สร้าง Dynamic Dashboard สำหรับรายงานรายได้พร้อมระบบกรองข้อมูลอัจฉริยะ',
-                'พัฒนาระบบ Authentication และ Security Flow ด้วย JWT & MongoDB',
-                'จัดการ Media Assets ผ่าน Cloudinary พร้อมระบบ Image Optimization',
+                'พัฒนาระบบ Authentication (JWT, Bcrypt) และ Email Verification (OTP) ด้วย Nodemailer',
+                'จัดการ Media Assets ผ่าน Cloudinary และตั้งค่า Automated Tasks ด้วย Node-Cron',
                 'สร้างและออกแบบ OBS Overlay สำหรับการแสดงผลข้อมูลแบบสด (Live Streaming Display)'
             ],
             features: [
@@ -24,27 +25,27 @@ function Projects() {
                     category: 'AI & Machine Learning Integration',
                     items: [
                         'AI Caption Generation: ใช้ Google Gemini API (Flash 2.5/2.0) วิเคราะห์รูปภาพและสร้างแคปชั่นสไตล์ Gen Z อัตโนมัติ',
+                        'Real-time Content Moderation: บูรณาการ Sightengine API เพื่อตรวจสอบและกรองรูปภาพที่ไม่เหมาะสมโดยอัตโนมัติ',
                         'AI Slip Verification: ระบบตรวจสอบสลิปโอนเงินอัตโนมัติด้วย Tesseract.js (OCR) รองรับภาษาไทย/อังกฤษ',
-                        'Image Content Filtering: กรองและตรวจสอบความเหมาะสมของรูปภาพเบื้องต้นก่อนขึ้นจอ',
                         'Advanced Prompt Engineering: ออกแบบคำสั่งเพื่อให้ AI ตอบสนองตามบริบทของร้านสถานบันเทิง'
                     ]
                 },
                 {
-                    category: 'Authentication & User Management',
+                    category: 'Authentication & Security',
                     items: [
-                        'Login/Register System ด้วย JWT Authentication & MongoDB',
-                        'Email Verification System (OTP) สำหรับความปลอดภัยในการสมัครสมาชิก',
-                        'User Profile Customization: อัปโหลดรูปโปรไฟล์ แสดงผลแบบ Real-time',
-                        'Protected Routes และ Session Management'
+                        'Secure Login/Register System: ใช้ JWT Authentication ร่วมกับความปลอดภัยจาก Bcrypt Hashing',
+                        'Email Verification System: ระบบส่ง OTP ผ่าน Nodemailer เพื่อยืนยันตัวตนและความปลอดภัยของบัญชี',
+                        'Protected Routes และ Session Management สำหรับ User และ Admin',
+                        'Role-based Access Control (RBAC) แยกส่วนการทำงานชัดเจน'
                     ]
                 },
                 {
                     category: 'Admin Dashboard & Analytics',
                     items: [
                         'Dynamic Income Statistics: รายงานรายได้พร้อมระบบกรองวันที่แบบละเอียด (Persistent Date Range)',
+                        'Automated System Maintenance: ใช้ Node-Cron สำหรับการจัดการข้อมูลและสรุปรายงานคิวอัตโนมัติ',
                         'Glassmorphism UI: ดีไซน์หน้า Admin ให้ทันสมัยด้วยเอฟเฟกต์โปร่งแสงและ SVG Icons',
-                        'Queue Management: ระบบจัดการคิวอัจฉริยะ (Pending, Playing, Completed) พร้อมประวัติการทำงาน',
-                        'System Configuration: ปรับเปลี่ยนค่าตั้งค่าของระบบได้ทันทีโดยไม่ต้อง Restart'
+                        'Queue Management: ระบบจัดการคิวอัจฉริยะ (Pending, Playing, Completed) พร้อมประวัติการทำงาน'
                     ]
                 },
                 {
@@ -59,14 +60,15 @@ function Projects() {
             ],
             techStack: [
                 'React.js',
+                'Node.js / Express',
                 'Google Gemini AI',
+                'Sightengine API',
                 'Tesseract.js (OCR)',
                 'Socket.IO',
                 'MongoDB / Mongoose',
-                'Express.js / Node.js',
                 'Cloudinary Storage',
-                'Glassmorphism CSS',
-                'SVG Icons (Lucide/Custom)'
+                'Nodemailer / Bcrypt',
+                'Vercel / Render (CI/CD)'
             ],
             image: '/cmes-preview.jpg',
             liveUrls: [
