@@ -15,7 +15,7 @@ const Navbar = () => {
     }
 
     const navItems = [
-        { id: 'why-frontend', label: 'ทำไมถึงเลือก Front-End' },
+        { id: 'why-fullstack', label: 'ทำไมถึงเลือก Fullstack' },
         { id: 'tech-stack', label: 'เทคโนโลยี' },
         { id: 'projects', label: 'ผลงาน' },
         { id: 'problem-solving', label: 'การแก้ปัญหา' },

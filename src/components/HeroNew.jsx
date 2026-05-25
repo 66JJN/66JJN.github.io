@@ -137,12 +137,12 @@ const HeroNew = () => {
                     <h1 className={styles.name}>ศุภกร แซ่พ่าน</h1>
 
                     <h2 className={styles.title}>
-                        <span className={styles.gradientText}>Front-End Developer</span>
+                        <span className={styles.gradientText}>Fullstack Developer</span>
                     </h2>
 
-                    <p className={styles.subtitle}>นักศึกษาสาขาวิทยาการคอมพิวเตอร์ มีความสนใจด้าน Front-End Development และการพัฒนา Web Application ที่เน้นประสบการณ์ผู้ใช้ (UX/UI)</p>
+                    <p className={styles.subtitle}>นักศึกษาสาขาวิทยาการคอมพิวเตอร์ ที่มีความหลงใหลในการพัฒนา Fullstack Application และการบูรณาการ AI</p>
 
-                    <p className={styles.description}>มีประสบการณ์พัฒนาเว็บไซต์ด้วย React.js เชื่อมต่อ REST API และแสดงผลข้อมูลแบบ Real-time ด้วย Socket.IO กำลังมองหาที่ฝึกงานตำแหน่ง Front-End Developer เพื่อพัฒนาทักษะและประสบการณ์การทำงานจริงในสายงาน</p>
+                    <p className={styles.description}>มีประสบการณ์พัฒนา Full-stack ตั้งแต่ระดับ Infrastructure, Database ไปจนถึง UI/UX พรีเมียม พร้อมทั้งเชี่ยวชาญการใช้ AI APIs (Gemini, Sightengine) และ Real-time Synchronization เพื่อสร้างนวัตกรรมที่ทันสมัย</p>
 
                     <div className={styles.ctaGroup}>
                         <button

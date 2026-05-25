@@ -5,17 +5,17 @@ function Skills() {
         {
             title: 'Front-End',
             icon: '💻',
-            skills: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Responsive Design']
+            skills: ['React', 'JavaScript (ES6+)', 'HTML5/CSS3', 'Responsive Design', 'Next.js']
         },
         {
-            title: 'UI/UX',
-            icon: '🎨',
-            skills: ['Responsive Design', 'Layout Design', 'Accessibility', 'User Experience', 'Mobile First']
+            title: 'Back-End',
+            icon: '⚙️',
+            skills: ['Node.js', 'Express', 'MongoDB', 'Socket.IO', 'RESTful API']
         },
         {
-            title: 'Tools & Others',
-            icon: '🛠️',
-            skills: ['Git & GitHub', 'Figma', 'VS Code', 'npm', 'Vite']
+            title: 'AI & Tools',
+            icon: '🤖',
+            skills: ['Gemini AI', 'Sightengine', 'Tesseract (OCR)', 'Git/GitHub', 'Cloudinary']
         }
     ];
 

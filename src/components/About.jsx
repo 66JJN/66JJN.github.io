@@ -6,7 +6,7 @@ function About() {
             <div className="container">
                 <h2 className={styles.sectionTitle}>เกี่ยวกับผม</h2>
                 <p className={styles.sectionSubtitle}>
-                    จาก Front-End สู่ Full-Stack Development และการบูรณาการ AI
+                    ความมุ่งมั่นในการสร้าง Full-Stack Solutions ที่ขับเคลื่อนด้วย AI
                 </p>
 
                 <div className={styles.content}>
@@ -44,8 +44,8 @@ function About() {
                             <span className={styles.cardIcon}>💻</span>
                             <h3 className={styles.cardTitle}>Full-Stack & AI Integration</h3>
                             <p className={styles.cardText}>
-                                พัฒนาทักษะจาก Front-End สู่ Full-Stack ด้วย Node.js และ MongoDB 
-                                พร้อมทั้งบูรณาการ AI APIs เช่น Gemini และ Sightengine ในการสร้างนวัตกรรมใหม่ๆ
+                                พัฒนา Web Application แบบครบวงจร (End-to-End) ด้วย <strong>MERN Stack</strong> 
+                                พร้อมทั้งบูรณาการ <strong>AI Integrations</strong> เช่น Gemini และ Sightengine ในการสร้างระบบอัจฉริยะ
                             </p>
                         </div>
 
@@ -53,8 +53,8 @@ function About() {
                             <span className={styles.cardIcon}>🚀</span>
                             <h3 className={styles.cardTitle}>Modern Web Architecture</h3>
                             <p className={styles.cardText}>
-                                ให้ความสำคัญกับความเร็ว (Performance) และการทำงานแบบ Real-time (Socket.IO) 
-                                รวมถึงการทำ CI/CD ด้วย Vercel และ Render เพื่อความรวดเร็วในการส่งมอบงาน
+                                เน้นสถาปัตยกรรมแบบ Scalable และ <strong>Real-time Synchronization (Socket.IO)</strong> 
+                                รวมถึงการทำ <strong>Automated Workflows</strong> และการ Deployment (Vercel/Render)
                             </p>
                         </div>
 

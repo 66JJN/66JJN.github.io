@@ -3,7 +3,7 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import { LanguageProvider } from './contexts/LanguageContext'
 import Navbar from './components/Navbar'
 import HeroNew from './components/HeroNew'
-import WhyFrontend from './components/WhyFrontend'
+import WhyFullstack from './components/WhyFullstack'
 import TechStack from './components/TechStack'
 import Projects from './components/Projects'
 import ProblemSolving from './components/ProblemSolving'
@@ -27,8 +27,8 @@ function App() {
 
           <Navbar />
           <HeroNew />
-          <div id="why-frontend">
-            <WhyFrontend />
+          <div id="why-fullstack">
+            <WhyFullstack />
           </div>
           <div id="tech-stack">
             <TechStack />

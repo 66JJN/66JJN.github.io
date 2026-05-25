@@ -35,18 +35,17 @@ function Hero() {
                     </h1>
 
                     <h2 className={`${styles.role} fade-in`}>
-                        Front-End Developer Intern
+                        Fullstack Developer
                     </h2>
 
                     <p className={`${styles.intro} fade-in-up`}>
-                        นักศึกษาสาขาวิทยาการคอมพิวเตอร์
-                        มีความสนใจด้าน Front-End Development และการพัฒนา Web Application
-                        ที่เน้นประสบการณ์ผู้ใช้ (UX/UI)
+                        นักศึกษาสาขาวิทยาการคอมพิวเตอร์ 
+                        ที่มีความหลงใหลในการพัฒนา <strong>Fullstack Application</strong> 
+                        ตั้งแต่การออกแบบ UI/UX ที่พรีเมียม ไปจนถึงการวางระบบ Backend ที่มั่นคงและมีประสิทธิภาพ
                         <br /><br />
-                        มีประสบการณ์พัฒนาเว็บไซต์ด้วย React.js
-                        เชื่อมต่อ REST API และแสดงผลข้อมูลแบบ Real-time ด้วย Socket.IO
-                        กำลังมองหาที่ฝึกงานตำแหน่ง Front-End Developer
-                        เพื่อพัฒนาทักษะและประสบการณ์การทำงานจริงในสายงาน
+                        มีประสบการณ์ครอบคลุมทั้ง <strong>Frontend (React)</strong> และ 
+                        <strong>Backend (Node.js/Express)</strong> พร้อมทั้งการบูรณาการ <strong>AI APIs</strong> 
+                        และการจัดการข้อมูล <strong>Real-time</strong> เพื่อสร้างนวัตกรรมที่ตอบโจทย์ผู้ใช้งานจริง
                     </p>
 
                     <div className={`${styles.ctaButtons} fade-in-up`}>

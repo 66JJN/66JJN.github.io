@@ -9,16 +9,16 @@ function Projects() {
             description: 'ระบบจัดการลูกค้าและการมีส่วนร่วมแบบ Real-time สำหรับร้านสถานบันเทิง ที่ช่วยให้ลูกค้าสามารถส่งข้อความ รูปภาพ และของขวัญผ่านระบบ พร้อมแสดงผลบนจอดิจิทัลแบบ Live ด้วย OBS Overlay',
             role: 'Full-Stack Developer | Lead Front-End Responsibilities',
             responsibilities: [
-                'ออกแบบและพัฒนา UI/UX ระดับ Premium ด้วย Glassmorphism Design System',
-                'บูรณาการ AI Gemini API สำหรับระบบอัตโนมัติ (Captioning & Content Generation)',
-                'พัฒนาระบบตรวจสอบภาพถ่ายด้วย OCR (Tesseract.js) เพื่อยืนยันการชำระเงินอัตโนมัติ',
-                'เพิ่มระบบ Content Moderation แบบ Real-time ด้วย Sightengine API เพื่อกรองสื่อที่ไม่เหมาะสม',
-                'จัดการ State และ Real-time Synchronization ผ่าน Socket.IO สำหรับ Queue System',
-                'ออกแบบ Responsive Layout แบบรองรับทุกอุปกรณ์ (Mobile-First & Interactive Design)',
-                'สร้าง Dynamic Dashboard สำหรับรายงานรายได้พร้อมระบบกรองข้อมูลอัจฉริยะ',
-                'พัฒนาระบบ Authentication (JWT, Bcrypt) และ Email Verification (OTP) ด้วย Nodemailer',
-                'จัดการ Media Assets ผ่าน Cloudinary และตั้งค่า Automated Tasks ด้วย Node-Cron',
-                'สร้างและออกแบบ OBS Overlay สำหรับการแสดงผลข้อมูลแบบสด (Live Streaming Display)'
+                'ออกแบบและพัฒนา Full-stack Architecture (Monorepo) โดยใช้ React, Node.js และ MongoDB',
+                'พัฒนา RESTful APIs สำหรับการจัดการข้อมูลลูกค้ารูปแบบ Multi-tenant (shopId isolation)',
+                'บูรณาการ Google Gemini 2.5-flash สำหรับวิเคราะห์รูปภาพและสร้างแคปชั่นสไตล์ Gen Z อัตโนมัติ',
+                'พัฒนาระบบ OCR ด้วย Tesseract.js เพื่อตรวจสอบสลิปโอนเงินอัตโนมัติ (Thai/English support)',
+                'บูรณาการ Sightengine API สำหรับ Real-time AI Content Moderation เพื่อความปลอดภัยของสื่อ',
+                'จัดการระบบ Real-time Synchronization ผ่าน Socket.IO สำหรับ Queue และ Ranking System',
+                'ออกแบบและสร้างหน้า Admin Dashboard พร้อมระบบ Income Statistics และ Automated Tasks (Node-Cron)',
+                'ควบคุม OBS Studio ผ่าน OBS WebSocket เพื่อแสดงผลผลข้อมูลแบบ Live Dynamic Overlay',
+                'พัฒนาระบบความปลอดภัยด้วย JWT, Bcrypt และ Email Verification (OTP) ผ่าน Nodemailer',
+                'ทำ CI/CD และ Deployment ระบบบน Vercel (Frontend) และ Render (Backend)'
             ],
             features: [
                 {
