@@ -1,5 +1,6 @@
-import ProjectCard from './ProjectCard';
 import styles from './Projects.module.css';
+import Icon from './icons/Icon';
+import iconStyles from './icons/icons.module.css';
 
 function Projects() {
     const projects = [
@@ -170,7 +171,10 @@ function Projects() {
 
                             {/* Tech Stack */}
                             <div className={styles.techStackSection}>
-                                <h4 className={styles.sectionLabel}>เทคโนโลยีที่ใช้</h4>
+                                <h4 className={styles.sectionLabel}>
+                                    <Icon name="code-bracket" size={20} className={iconStyles.iconInline} />
+                                    เทคโนโลยีที่ใช้
+                                </h4>
                                 <div className={styles.techTags}>
                                     {project.techStack.map((tech, i) => (
                                         <span key={i} className={styles.techTag}>{tech}</span>
@@ -181,7 +185,7 @@ function Projects() {
                             {/* Responsibilities */}
                             <div className={styles.responsibilitiesSection}>
                                 <h4 className={styles.sectionLabel}>
-                                    <span className={styles.labelIcon}></span>
+                                    <Icon name="briefcase" size={20} className={iconStyles.iconInline} />
                                     {project.role}
                                 </h4>
                                 <ul className={styles.responsibilitiesList}>
@@ -197,7 +201,7 @@ function Projects() {
                             {/* Features */}
                             <div className={styles.featuresSection}>
                                 <h4 className={styles.sectionLabel}>
-                                    <span className={styles.labelIcon}></span>
+                                    <Icon name="puzzle-piece" size={20} className={iconStyles.iconInline} />
                                     Features ที่พัฒนา
                                 </h4>
                                 <div className={styles.featuresGrid}>

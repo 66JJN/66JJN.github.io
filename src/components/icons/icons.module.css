@@ -1,0 +1,46 @@
+.iconBox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+}
+
+.iconBoxSm {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background: rgba(102, 126, 234, 0.12);
+}
+
+.iconBoxMd {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background: rgba(102, 126, 234, 0.12);
+}
+
+.iconBoxLg {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(102, 126, 234, 0.15);
+}
+
+.iconBoxAccent {
+    background: var(--color-accent);
+    color: white;
+}
+
+.iconBoxLight {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.iconInline {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-accent);
+    flex-shrink: 0;
+}

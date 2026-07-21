@@ -172,10 +172,6 @@
     gap: var(--spacing-xs);
 }
 
-.labelIcon {
-    font-size: 22px;
-}
-
 .techTags {
     display: flex;
     flex-wrap: wrap;

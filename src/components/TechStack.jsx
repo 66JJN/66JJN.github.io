@@ -1,10 +1,12 @@
 import styles from './TechStack.module.css';
+import Icon from './icons/Icon';
+import iconStyles from './icons/icons.module.css';
 
 function TechStack() {
     const techCategories = [
         {
             title: 'MERN Stack & Core',
-            icon: '',
+            icon: 'code-bracket',
             description: 'หัวใจสำคัญของการพัฒนา Modern Full-stack Application',
             skills: [
                 { name: 'React (Frontend)', detail: 'สร้าง Dynamic UI ด้วย Component-based Architecture และ Hooks' },
@@ -15,7 +17,7 @@ function TechStack() {
         },
         {
             title: 'Real-time & Security',
-            icon: '',
+            icon: 'shield-check',
             description: 'ระบบที่ปลอดภัยและทำงานได้ทันทีแบบ Real-time',
             skills: [
                 { name: 'Socket.IO', detail: 'จัดการข้อมูลแบบ Real-time Bi-directional Synchronization' },
@@ -26,7 +28,7 @@ function TechStack() {
         },
         {
             title: 'AI & Machine Learning',
-            icon: '',
+            icon: 'cpu',
             description: 'การบูรณาการ AI เพื่อเพิ่มขีดความสามารถอัจฉริยะให้กับระบบ',
             skills: [
                 { name: 'Google Gemini AI', detail: 'วิเคราะห์รูปภาพและสร้าง Content อัตโนมัติ (Flash 2.5/2.0)' },
@@ -37,7 +39,7 @@ function TechStack() {
         },
         {
             title: 'DevOps & Workflow',
-            icon: '',
+            icon: 'cloud',
             description: 'การจัดการ Infrastructure และกระบวนการพัฒนาที่มีประสิทธิภาพ',
             skills: [
                 { name: 'Vercel & Render', detail: 'การทำ CI/CD และการ Deployment ที่รวดเร็วทั้ง SPA และ API' },
@@ -64,7 +66,9 @@ function TechStack() {
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className={styles.categoryHeader}>
-                                <span className={styles.categoryIcon}>{category.icon}</span>
+                                <span className={`${iconStyles.iconBox} ${iconStyles.iconBoxLg}`}>
+                                    <Icon name={category.icon} size={24} />
+                                </span>
                                 <div>
                                     <h3 className={styles.categoryTitle}>{category.title}</h3>
                                     <p className={styles.categoryDesc}>{category.description}</p>

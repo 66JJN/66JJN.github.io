@@ -74,7 +74,6 @@
 }
 
 .stepIcon {
-    font-size: 36px;
     flex-shrink: 0;
 }
 
@@ -161,7 +160,6 @@
 }
 
 .mindsetIcon {
-    font-size: 56px;
     flex-shrink: 0;
 }
 
@@ -202,10 +200,6 @@
         text-align: center;
     }
 
-    .mindsetIcon {
-        margin: 0 auto;
-    }
-
     .stepCard {
         padding: var(--spacing-md);
     }
@@ -236,9 +230,5 @@
 
     .mindsetText {
         font-size: 15px;
-    }
-
-    .mindsetIcon {
-        font-size: 48px;
     }
 }

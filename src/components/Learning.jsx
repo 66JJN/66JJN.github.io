@@ -1,24 +1,26 @@
 import styles from './Learning.module.css';
+import Icon from './icons/Icon';
+import iconStyles from './icons/icons.module.css';
 
 function Learning() {
     const learningSteps = [
         {
-            icon: '',
+            icon: 'book-open',
             title: 'การเรียนรู้ด้วยตนเอง',
             description: 'เริ่มต้นจากพื้นฐาน Web Development จนก้าวสู่การเป็น Fullstack ด้วยการศึกษา Node.js, Express และ MongoDB ควบคู่ไปกับ Frontend Frameworks สมัยใหม่ โดยเน้นการอ่าน Official Documentation และการทำความเข้าใจสถาปัตยกรรมระบบอย่างลึกซึ้ง'
         },
         {
-            icon: '',
+            icon: 'wrench',
             title: 'Learning by Doing',
             description: 'เน้นการสร้าง End-to-End Solutions ในโปรเจกต์จริง โดยทุกความท้าทายคือโอกาสในการเรียนรู้ ตั้งแต่การออกแบบโครงสร้างฐานข้อมูลไปจนถึงการขัดเกลา UI/UX ให้สมบูรณ์แบบที่สุด'
         },
         {
-            icon: '',
+            icon: 'bug-ant',
             title: 'การแก้ปัญหาและ Debug',
             description: 'เชี่ยวชาญการใช้เครื่องมือวินิจฉัยปัญหาทั้งฝั่ง Frontend (DevTools) และ Backend (Postman, Server Logs) เพื่อระบุจุดบกพร่องและแก้ไขให้ตรงจุด พร้อมบันทึก Case Study เพื่อป้องกันปัญหาซ้ำซ้อน'
         },
         {
-            icon: '',
+            icon: 'chat-bubble-left-right',
             title: 'การรับและปรับปรุงจาก Feedback',
             description: 'เปิดรับความเห็นจากเพื่อนร่วมทีมและ Code Review เพื่อปรับปรุงโค้ดให้มีประสิทธิภาพ (Performance), ความปลอดภัย (Security) และการเขียนโค้ดที่ผู้อื่นสามารถดูแลต่อได้ง่าย (Maintainability)'
         }
@@ -47,7 +49,9 @@ function Learning() {
                                 className={styles.stepCard}
                                 style={{ animationDelay: `${index * 0.1}s` }}
                             >
-                                <span className={styles.stepIcon}>{step.icon}</span>
+                                <span className={`${iconStyles.iconBox} ${iconStyles.iconBoxMd}`}>
+                                    <Icon name={step.icon} size={22} />
+                                </span>
                                 <div className={styles.stepContent}>
                                     <h3 className={styles.stepTitle}>{step.title}</h3>
                                     <p className={styles.stepDesc}>{step.description}</p>
@@ -58,6 +62,9 @@ function Learning() {
 
                     <div className={styles.goalsSection}>
                         <h3 className={styles.goalsTitle}>
+                            <span className={`${iconStyles.iconBox} ${iconStyles.iconBoxSm}`}>
+                                <Icon name="target" size={18} />
+                            </span>
                             เป้าหมายในการเรียนรู้ต่อไป
                         </h3>
                         <ul className={styles.goalsList}>
@@ -71,7 +78,9 @@ function Learning() {
                     </div>
 
                     <div className={styles.mindsetBox}>
-                        <div className={styles.mindsetIcon}>💭</div>
+                        <div className={`${iconStyles.iconBox} ${iconStyles.iconBoxLg} ${iconStyles.iconBoxLight}`}>
+                            <Icon name="lightbulb" size={28} />
+                        </div>
                         <div className={styles.mindsetContent}>
                             <h3 className={styles.mindsetTitle}>Growth Mindset</h3>
                             <p className={styles.mindsetText}>

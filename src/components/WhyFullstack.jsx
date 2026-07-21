@@ -1,6 +1,36 @@
 import styles from './WhyFrontend.module.css';
+import Icon from './icons/Icon';
+import iconStyles from './icons/icons.module.css';
 
 function WhyFullstack() {
+    const focusAreas = [
+        {
+            icon: 'arrows-right-left',
+            name: 'End-to-End Solutions',
+            desc: 'สร้างระบบที่สมบูรณ์แบบตั้งแต่โครงสร้าง Data ไปจนถึง UI ที่สวยงาม',
+        },
+        {
+            icon: 'shield',
+            name: 'Security & Privacy',
+            desc: 'ให้ความสำคัญกับความปลอดภัยของข้อมูล และระบบ Authentication ที่มั่นคง',
+        },
+        {
+            icon: 'sparkles',
+            name: 'AI Empowerment',
+            desc: 'ใช้ AI ในการวิเคราะห์ข้อมูลและสร้างระบบอัตโนมัติที่สลับซับซ้อน',
+        },
+        {
+            icon: 'bolt',
+            name: 'Real-time Efficiency',
+            desc: 'จัดการการไหลของข้อมูลแบบทันที เพื่อประสบการณ์ที่ลื่นไหลที่สุด',
+        },
+        {
+            icon: 'chart-bar',
+            name: 'Scalable Architecture',
+            desc: 'ออกแบบระบบให้เติบโตได้และง่ายต่อการบำรุงรักษาในระยะยาว',
+        },
+    ];
+
     return (
         <section className={styles.whyFrontend} id="why-fullstack">
             <div className="container">
@@ -25,45 +55,15 @@ function WhyFullstack() {
                         <h3 className={styles.focusTitle}>สิ่งที่ผมให้ความสำคัญ</h3>
 
                         <div className={styles.focusGrid}>
-                            <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}></span>
-                                <h4 className={styles.focusName}>End-to-End Solutions</h4>
-                                <p className={styles.focusDesc}>
-                                    สร้างระบบที่สมบูรณ์แบบตั้งแต่โครงสร้าง Data ไปจนถึง UI ที่สวยงาม
-                                </p>
-                            </div>
-
-                            <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}></span>
-                                <h4 className={styles.focusName}>Security & Privacy</h4>
-                                <p className={styles.focusDesc}>
-                                    ให้ความสำคัญกับความปลอดภัยของข้อมูล และระบบ Authentication ที่มั่นคง
-                                </p>
-                            </div>
-
-                            <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}></span>
-                                <h4 className={styles.focusName}>AI Empowerment</h4>
-                                <p className={styles.focusDesc}>
-                                    ใช้ AI ในการวิเคราะห์ข้อมูลและสร้างระบบอัตโนมัติที่สลับซับซ้อน
-                                </p>
-                            </div>
-
-                            <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}></span>
-                                <h4 className={styles.focusName}>Real-time Efficiency</h4>
-                                <p className={styles.focusDesc}>
-                                    จัดการการไหลของข้อมูลแบบทันที เพื่อประสบการณ์ที่ลื่นไหลที่สุด
-                                </p>
-                            </div>
-
-                            <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}></span>
-                                <h4 className={styles.focusName}>Scalable Architecture</h4>
-                                <p className={styles.focusDesc}>
-                                    ออกแบบระบบให้เติบโตได้และง่ายต่อการบำรุงรักษาในระยะยาว
-                                </p>
-                            </div>
+                            {focusAreas.map((area, index) => (
+                                <div key={index} className={styles.focusCard}>
+                                    <span className={`${iconStyles.iconBox} ${iconStyles.iconBoxMd}`}>
+                                        <Icon name={area.icon} size={22} />
+                                    </span>
+                                    <h4 className={styles.focusName}>{area.name}</h4>
+                                    <p className={styles.focusDesc}>{area.desc}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

@@ -47,7 +47,7 @@
 }
 
 .icon {
-    font-size: 28px;
+    flex-shrink: 0;
 }
 
 .timeline {
@@ -157,7 +157,6 @@
 }
 
 .cardIcon {
-    font-size: 32px;
     display: block;
     margin-bottom: var(--spacing-sm);
 }

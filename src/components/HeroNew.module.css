@@ -163,8 +163,8 @@
 }
 
 .ctaIcon {
-    font-size: 1.2rem;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .ctaPrimary:hover .ctaIcon {

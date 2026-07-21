@@ -1,6 +1,41 @@
 import styles from './About.module.css';
+import Icon from './icons/Icon';
+import iconStyles from './icons/icons.module.css';
 
 function About() {
+    const interests = [
+        {
+            icon: 'layers',
+            title: 'Full-Stack & AI Integration',
+            text: (
+                <>
+                    พัฒนา Web Application แบบครบวงจร (End-to-End) ด้วย <strong>MERN Stack</strong>
+                    {' '}พร้อมทั้งบูรณาการ <strong>AI Integrations</strong> เช่น Gemini และ Sightengine ในการสร้างระบบอัจฉริยะ
+                </>
+            ),
+        },
+        {
+            icon: 'server-stack',
+            title: 'Modern Web Architecture',
+            text: (
+                <>
+                    เน้นสถาปัตยกรรมแบบ Scalable และ <strong>Real-time Synchronization (Socket.IO)</strong>
+                    {' '}รวมถึงการทำ <strong>Automated Workflows</strong> และการ Deployment (Vercel/Render)
+                </>
+            ),
+        },
+        {
+            icon: 'book-open',
+            title: 'Continuous Learning',
+            text: (
+                <>
+                    เชื่อในการเรียนรู้ตลอดชีวิต (Life-long Learning) ศึกษาเทคโนโลยีใหม่ๆ
+                    {' '}และปรับตัวให้ทันกับโลกของ AI และ Software Development อยู่เสมอ
+                </>
+            ),
+        },
+    ];
+
     return (
         <section className={styles.about} id="about">
             <div className="container">
@@ -12,7 +47,9 @@ function About() {
                 <div className={styles.content}>
                     <div className={styles.education}>
                         <h3 className={styles.subtitle}>
-                            <span className={styles.icon}>🎓</span>
+                            <span className={`${iconStyles.iconBox} ${iconStyles.iconBoxSm}`}>
+                                <Icon name="graduation-cap" size={20} />
+                            </span>
                             การศึกษา
                         </h3>
 
@@ -40,32 +77,15 @@ function About() {
                     </div>
 
                     <div className={styles.interests}>
-                        <div className={styles.interestCard}>
-                            <span className={styles.cardIcon}></span>
-                            <h3 className={styles.cardTitle}>Full-Stack & AI Integration</h3>
-                            <p className={styles.cardText}>
-                                พัฒนา Web Application แบบครบวงจร (End-to-End) ด้วย <strong>MERN Stack</strong> 
-                                พร้อมทั้งบูรณาการ <strong>AI Integrations</strong> เช่น Gemini และ Sightengine ในการสร้างระบบอัจฉริยะ
-                            </p>
-                        </div>
-
-                        <div className={styles.interestCard}>
-                            <span className={styles.cardIcon}></span>
-                            <h3 className={styles.cardTitle}>Modern Web Architecture</h3>
-                            <p className={styles.cardText}>
-                                เน้นสถาปัตยกรรมแบบ Scalable และ <strong>Real-time Synchronization (Socket.IO)</strong> 
-                                รวมถึงการทำ <strong>Automated Workflows</strong> และการ Deployment (Vercel/Render)
-                            </p>
-                        </div>
-
-                        <div className={styles.interestCard}>
-                            <span className={styles.cardIcon}></span>
-                            <h3 className={styles.cardTitle}>Continuous Learning</h3>
-                            <p className={styles.cardText}>
-                                เชื่อในการเรียนรู้ตลอดชีวิต (Life-long Learning) ศึกษาเทคโนโลยีใหม่ๆ 
-                                และปรับตัวให้ทันกับโลกของ AI และ Software Development อยู่เสมอ
-                            </p>
-                        </div>
+                        {interests.map((item, index) => (
+                            <div key={index} className={styles.interestCard}>
+                                <span className={`${iconStyles.iconBox} ${iconStyles.iconBoxMd}`}>
+                                    <Icon name={item.icon} size={22} />
+                                </span>
+                                <h3 className={styles.cardTitle}>{item.title}</h3>
+                                <p className={styles.cardText}>{item.text}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

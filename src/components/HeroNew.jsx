@@ -1,5 +1,6 @@
 import { useRef, useEffect, useCallback } from 'react'
 import styles from './HeroNew.module.css'
+import Icon from './icons/Icon'
 
 const HeroNew = () => {
     // Tech stacks with proper icons
@@ -150,7 +151,7 @@ const HeroNew = () => {
                             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             ดูผลงาน
-                            <span className={styles.ctaIcon}>→</span>
+                            <Icon name="arrow-right" size={20} className={styles.ctaIcon} />
                         </button>
                     </div>
                 </div>

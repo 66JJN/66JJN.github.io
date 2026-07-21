@@ -96,9 +96,8 @@
 }
 
 .focusIcon {
-    font-size: 40px;
     display: block;
-    margin-bottom: var(--spacing-sm);
+    margin: 0 auto var(--spacing-sm);
 }
 
 .focusName {
