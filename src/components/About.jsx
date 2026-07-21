@@ -41,7 +41,7 @@ function About() {
 
                     <div className={styles.interests}>
                         <div className={styles.interestCard}>
-                            <span className={styles.cardIcon}>💻</span>
+                            <span className={styles.cardIcon}></span>
                             <h3 className={styles.cardTitle}>Full-Stack & AI Integration</h3>
                             <p className={styles.cardText}>
                                 พัฒนา Web Application แบบครบวงจร (End-to-End) ด้วย <strong>MERN Stack</strong> 
@@ -50,7 +50,7 @@ function About() {
                         </div>
 
                         <div className={styles.interestCard}>
-                            <span className={styles.cardIcon}>🚀</span>
+                            <span className={styles.cardIcon}></span>
                             <h3 className={styles.cardTitle}>Modern Web Architecture</h3>
                             <p className={styles.cardText}>
                                 เน้นสถาปัตยกรรมแบบ Scalable และ <strong>Real-time Synchronization (Socket.IO)</strong> 
@@ -59,7 +59,7 @@ function About() {
                         </div>
 
                         <div className={styles.interestCard}>
-                            <span className={styles.cardIcon}>🎯</span>
+                            <span className={styles.cardIcon}></span>
                             <h3 className={styles.cardTitle}>Continuous Learning</h3>
                             <p className={styles.cardText}>
                                 เชื่อในการเรียนรู้ตลอดชีวิต (Life-long Learning) ศึกษาเทคโนโลยีใหม่ๆ 

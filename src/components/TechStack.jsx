@@ -4,7 +4,7 @@ function TechStack() {
     const techCategories = [
         {
             title: 'MERN Stack & Core',
-            icon: '⚛️',
+            icon: '',
             description: 'หัวใจสำคัญของการพัฒนา Modern Full-stack Application',
             skills: [
                 { name: 'React (Frontend)', detail: 'สร้าง Dynamic UI ด้วย Component-based Architecture และ Hooks' },
@@ -15,7 +15,7 @@ function TechStack() {
         },
         {
             title: 'Real-time & Security',
-            icon: '🛡️',
+            icon: '',
             description: 'ระบบที่ปลอดภัยและทำงานได้ทันทีแบบ Real-time',
             skills: [
                 { name: 'Socket.IO', detail: 'จัดการข้อมูลแบบ Real-time Bi-directional Synchronization' },
@@ -26,7 +26,7 @@ function TechStack() {
         },
         {
             title: 'AI & Machine Learning',
-            icon: '🤖',
+            icon: '',
             description: 'การบูรณาการ AI เพื่อเพิ่มขีดความสามารถอัจฉริยะให้กับระบบ',
             skills: [
                 { name: 'Google Gemini AI', detail: 'วิเคราะห์รูปภาพและสร้าง Content อัตโนมัติ (Flash 2.5/2.0)' },
@@ -37,7 +37,7 @@ function TechStack() {
         },
         {
             title: 'DevOps & Workflow',
-            icon: '🚀',
+            icon: '',
             description: 'การจัดการ Infrastructure และกระบวนการพัฒนาที่มีประสิทธิภาพ',
             skills: [
                 { name: 'Vercel & Render', detail: 'การทำ CI/CD และการ Deployment ที่รวดเร็วทั้ง SPA และ API' },

@@ -26,7 +26,7 @@ function WhyFullstack() {
 
                         <div className={styles.focusGrid}>
                             <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}>🧩</span>
+                                <span className={styles.focusIcon}></span>
                                 <h4 className={styles.focusName}>End-to-End Solutions</h4>
                                 <p className={styles.focusDesc}>
                                     สร้างระบบที่สมบูรณ์แบบตั้งแต่โครงสร้าง Data ไปจนถึง UI ที่สวยงาม
@@ -34,7 +34,7 @@ function WhyFullstack() {
                             </div>
 
                             <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}>🛡️</span>
+                                <span className={styles.focusIcon}></span>
                                 <h4 className={styles.focusName}>Security & Privacy</h4>
                                 <p className={styles.focusDesc}>
                                     ให้ความสำคัญกับความปลอดภัยของข้อมูล และระบบ Authentication ที่มั่นคง
@@ -42,7 +42,7 @@ function WhyFullstack() {
                             </div>
 
                             <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}>🤖</span>
+                                <span className={styles.focusIcon}></span>
                                 <h4 className={styles.focusName}>AI Empowerment</h4>
                                 <p className={styles.focusDesc}>
                                     ใช้ AI ในการวิเคราะห์ข้อมูลและสร้างระบบอัตโนมัติที่สลับซับซ้อน
@@ -50,7 +50,7 @@ function WhyFullstack() {
                             </div>
 
                             <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}>⚡</span>
+                                <span className={styles.focusIcon}></span>
                                 <h4 className={styles.focusName}>Real-time Efficiency</h4>
                                 <p className={styles.focusDesc}>
                                     จัดการการไหลของข้อมูลแบบทันที เพื่อประสบการณ์ที่ลื่นไหลที่สุด
@@ -58,7 +58,7 @@ function WhyFullstack() {
                             </div>
 
                             <div className={styles.focusCard}>
-                                <span className={styles.focusIcon}>🏗️</span>
+                                <span className={styles.focusIcon}></span>
                                 <h4 className={styles.focusName}>Scalable Architecture</h4>
                                 <p className={styles.focusDesc}>
                                     ออกแบบระบบให้เติบโตได้และง่ายต่อการบำรุงรักษาในระยะยาว

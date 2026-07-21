@@ -3,22 +3,22 @@ import styles from './Learning.module.css';
 function Learning() {
     const learningSteps = [
         {
-            icon: '📚',
+            icon: '',
             title: 'การเรียนรู้ด้วยตนเอง',
             description: 'เริ่มต้นจากพื้นฐาน Web Development จนก้าวสู่การเป็น Fullstack ด้วยการศึกษา Node.js, Express และ MongoDB ควบคู่ไปกับ Frontend Frameworks สมัยใหม่ โดยเน้นการอ่าน Official Documentation และการทำความเข้าใจสถาปัตยกรรมระบบอย่างลึกซึ้ง'
         },
         {
-            icon: '🔨',
+            icon: '',
             title: 'Learning by Doing',
             description: 'เน้นการสร้าง End-to-End Solutions ในโปรเจกต์จริง โดยทุกความท้าทายคือโอกาสในการเรียนรู้ ตั้งแต่การออกแบบโครงสร้างฐานข้อมูลไปจนถึงการขัดเกลา UI/UX ให้สมบูรณ์แบบที่สุด'
         },
         {
-            icon: '🐛',
+            icon: '',
             title: 'การแก้ปัญหาและ Debug',
             description: 'เชี่ยวชาญการใช้เครื่องมือวินิจฉัยปัญหาทั้งฝั่ง Frontend (DevTools) และ Backend (Postman, Server Logs) เพื่อระบุจุดบกพร่องและแก้ไขให้ตรงจุด พร้อมบันทึก Case Study เพื่อป้องกันปัญหาซ้ำซ้อน'
         },
         {
-            icon: '💬',
+            icon: '',
             title: 'การรับและปรับปรุงจาก Feedback',
             description: 'เปิดรับความเห็นจากเพื่อนร่วมทีมและ Code Review เพื่อปรับปรุงโค้ดให้มีประสิทธิภาพ (Performance), ความปลอดภัย (Security) และการเขียนโค้ดที่ผู้อื่นสามารถดูแลต่อได้ง่าย (Maintainability)'
         }
@@ -58,7 +58,6 @@ function Learning() {
 
                     <div className={styles.goalsSection}>
                         <h3 className={styles.goalsTitle}>
-                            <span className={styles.goalsEmoji}>🎯</span>
                             เป้าหมายในการเรียนรู้ต่อไป
                         </h3>
                         <ul className={styles.goalsList}>

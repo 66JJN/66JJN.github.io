@@ -181,7 +181,7 @@ function Projects() {
                             {/* Responsibilities */}
                             <div className={styles.responsibilitiesSection}>
                                 <h4 className={styles.sectionLabel}>
-                                    <span className={styles.labelIcon}>⚡</span>
+                                    <span className={styles.labelIcon}></span>
                                     {project.role}
                                 </h4>
                                 <ul className={styles.responsibilitiesList}>
@@ -197,7 +197,7 @@ function Projects() {
                             {/* Features */}
                             <div className={styles.featuresSection}>
                                 <h4 className={styles.sectionLabel}>
-                                    <span className={styles.labelIcon}>✨</span>
+                                    <span className={styles.labelIcon}></span>
                                     Features ที่พัฒนา
                                 </h4>
                                 <div className={styles.featuresGrid}>
