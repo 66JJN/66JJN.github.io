@@ -76,9 +76,14 @@ function Learning() {
                         <div className={styles.mindsetContent}>
                             <h3 className={styles.mindsetTitle}>Growth Mindset</h3>
                             <p className={styles.mindsetText}>
-                                ผมเชื่อว่าการเป็น Fullstack Developer ที่ดีคือการไม่หยุดนิ่งในการเรียนรู้เทคโนโลยีใหม่ๆ 
-                                และมีความรับผิดชอบต่อชิ้นงานตั้งแต่ต้นจนจบ (Ownership) 
-                                ผมพร้อมที่จะก้าวข้าม Comfort Zone เพื่อแก้ไขปัญหาที่ซับซ้อนและพัฒนาตัวเองให้เป็น Engineer ที่ครบเครื่องในทุกวัน
+                                เรียนรู้จากการลงมือทำจริง ไม่ใช่แค่ดูคลิป
+                                <br />
+                                <strong>CMES</strong> เริ่มจากฟอร์มอัปโหลดธรรมดา
+                                แล้วค่อยๆกลายเป็น multi-tenant architecture,
+                                AI integration, OCR verification และ security
+                                hardening เพราะแต่ละปัญหาพาไปเจอสิ่งใหม่ๆ
+                                <br />
+                                ที่ต้องเรียนรู้เพิ่มขึ้นเรื่อยๆ
                             </p>
                         </div>
                     </div>

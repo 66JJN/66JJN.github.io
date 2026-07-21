@@ -140,7 +140,7 @@ const HeroNew = () => {
                         <span className={styles.gradientText}>Fullstack Developer</span>
                     </h2>
 
-                    <p className={styles.subtitle}>นักศึกษาสาขาวิทยาการคอมพิวเตอร์ ที่มีความหลงใหลในการพัฒนา Fullstack Application และการบูรณาการ AI</p>
+                    <p className={styles.subtitle}>นักศึกษาสาขาวิทยาการคอมพิวเตอร์ ที่ชื่นชอบในการพัฒนา Fullstack Application และการบูรณาการ AI</p>
 
                     <p className={styles.description}>มีประสบการณ์พัฒนา Full-stack ตั้งแต่ระดับ Infrastructure, Database ไปจนถึง UI/UX พรีเมียม พร้อมทั้งเชี่ยวชาญการใช้ AI APIs (Gemini, Sightengine) และ Real-time Synchronization เพื่อสร้างนวัตกรรมที่ทันสมัย</p>
 
