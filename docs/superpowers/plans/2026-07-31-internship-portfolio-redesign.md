@@ -222,12 +222,12 @@ export const portfolioContent = {
     controls: { skip: 'ข้ามไปยังเนื้อหา', language: 'เปลี่ยนภาษาเป็นอังกฤษ', themeLight: 'เปลี่ยนเป็นโหมดสว่าง', themeDark: 'เปลี่ยนเป็นโหมดมืด', menu: 'เปิดเมนู', closeMenu: 'ปิดเมนู' },
     hero: {
       eyebrow: 'FULL-STACK DEVELOPER INTERN',
-      name: 'สุภกร แซ่พ่าน',
+      name: 'ศุภกร แซ่พ่าน',
       title: 'สร้างเว็บตั้งแต่หน้าจอไปจนถึงระบบหลังบ้าน',
       intro: 'ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่ชอบพัฒนาเว็บให้ครบทั้งระบบ ตั้งแต่หน้าจอ React, API และ MongoDB ไปจนถึงงาน real-time และการเชื่อมต่อบริการ AI กำลังมองหาโอกาสฝึกงานด้าน Full-stack หรือ Web Development',
       viewWork: 'ดูผลงาน',
       resume: 'ดาวน์โหลด Resume',
-      portraitAlt: 'ภาพถ่ายของสุภกร แซ่พ่าน',
+      portraitAlt: 'ภาพถ่ายของศุภกร แซ่พ่าน',
     },
     selectedWork: { eyebrow: 'SELECTED WORK', title: 'โปรเจกต์ที่แสดงวิธีคิดและการลงมือทำของผม' },
     projects: [
@@ -292,7 +292,7 @@ export const portfolioContent = {
       period: '2566–ปัจจุบัน',
     },
     contact: { eyebrow: 'CONTACT', title: 'กำลังมองหาโอกาสฝึกงานด้านการพัฒนาเว็บ', body: 'สนใจตำแหน่ง Full-stack, Front-end, Back-end หรือ Web Developer Intern สามารถติดต่อเพื่อพูดคุยเกี่ยวกับโปรเจกต์และการฝึกงานได้ครับ', email: 'อีเมล', phone: 'โทรศัพท์', github: 'GitHub', resume: 'ดาวน์โหลด Resume' },
-    footer: { name: 'สุภกร แซ่พ่าน', note: 'Full-stack Developer Intern · Thailand' },
+    footer: { name: 'ศุภกร แซ่พ่าน', note: 'Full-stack Developer Intern · Thailand' },
   },
   en: {
     ...shared,
@@ -393,7 +393,7 @@ Test observable behavior through small consumer buttons rendered inside each rea
 it('starts in Thai, persists English, and updates the document language', async () => {
   const user = userEvent.setup()
   render(<LanguageProvider><LanguageProbe /></LanguageProvider>)
-  expect(screen.getByText('สุภกร แซ่พ่าน')).toBeInTheDocument()
+  expect(screen.getByText('ศุภกร แซ่พ่าน')).toBeInTheDocument()
   await user.click(screen.getByRole('button', { name: 'switch-language' }))
   expect(screen.getByText('Suphakon Saephan')).toBeInTheDocument()
   expect(localStorage.getItem('portfolio-language')).toBe('en')

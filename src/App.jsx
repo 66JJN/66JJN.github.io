@@ -1,55 +1,30 @@
-import './App.css'
-import { ThemeProvider } from './contexts/ThemeContext'
 import { LanguageProvider } from './contexts/LanguageContext'
-import Navbar from './components/Navbar'
-import HeroNew from './components/HeroNew'
-import WhyFullstack from './components/WhyFullstack'
-import TechStack from './components/TechStack'
-import Projects from './components/Projects'
-import ProblemSolving from './components/ProblemSolving'
-import About from './components/About'
-import Learning from './components/Learning'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { ThemeProvider } from './contexts/ThemeContext'
+import {
+  About,
+  Capabilities,
+  Contact,
+  EngineeringNotes,
+  Footer,
+  Header,
+  Hero,
+  SelectedWork,
+} from './components/Portfolio'
 
 function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="app">
-          {/* Global Background Layer */}
-          <div className="globalBgLayer">
-            <div className="globalBgEffect globalBgEffect1"></div>
-            <div className="globalBgEffect globalBgEffect2"></div>
-            <div className="globalBgEffect globalBgEffect3"></div>
-            <div className="globalBgEffect globalBgEffect4"></div>
-          </div>
-
-          <Navbar />
-          <HeroNew />
-          <div id="why-fullstack">
-            <WhyFullstack />
-          </div>
-          <div id="tech-stack">
-            <TechStack />
-          </div>
-          <div id="projects">
-            <Projects />
-          </div>
-          <div id="problem-solving">
-            <ProblemSolving />
-          </div>
-          <div id="about">
-            <About />
-          </div>
-          <div id="learning">
-            <Learning />
-          </div>
-          <div id="contact">
-            <Contact />
-          </div>
-          <Footer />
-        </div>
+        <Header />
+        <main id="main-content">
+          <Hero />
+          <SelectedWork />
+          <Capabilities />
+          <EngineeringNotes />
+          <About />
+          <Contact />
+        </main>
+        <Footer />
       </LanguageProvider>
     </ThemeProvider>
   )
