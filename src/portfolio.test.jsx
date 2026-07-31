@@ -57,4 +57,31 @@ describe('portfolio experience', () => {
     expect(pullGroup?.querySelector('.lamp__cord')).toBeInTheDocument()
     expect(pullGroup?.querySelector('.lamp__handle')).toBeInTheDocument()
   })
+
+  it('uses protected Thai word boundaries in large portfolio headings', () => {
+    render(<App />)
+    const heading = screen.getByRole('heading', { name: 'โปรเจกต์ที่แสดงวิธีคิดและการลงมือทำของผม' })
+
+    expect(heading.querySelector('[data-thai-word="โปรเจกต์"]')).toBeInTheDocument()
+  })
+
+  it('marks complete reading groups as scroll reveal targets', () => {
+    const { container } = render(<App />)
+
+    expect(container.querySelector('.section-heading')).toHaveAttribute('data-reveal')
+    expect(container.querySelector('.project__body')).toHaveAttribute('data-reveal')
+    expect(container.querySelectorAll('.capability-grid article[data-reveal]')).toHaveLength(4)
+    expect(container.querySelectorAll('.engineering-card[data-reveal]')).toHaveLength(3)
+  })
+
+  it('adds a decorative 24-tile wipe to every project image', () => {
+    const { container } = render(<App />)
+    const wipes = [...container.querySelectorAll('.project-shot .image-wipe')]
+
+    expect(wipes.length).toBeGreaterThan(0)
+    wipes.forEach((wipe) => {
+      expect(wipe).toHaveAttribute('aria-hidden', 'true')
+      expect(wipe.querySelectorAll('[data-reveal-tile]')).toHaveLength(24)
+    })
+  })
 })

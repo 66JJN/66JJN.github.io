@@ -1,5 +1,6 @@
 import { LanguageProvider } from './contexts/LanguageContext'
 import { ThemeProvider } from './contexts/ThemeContext'
+import { useScrollReveal } from './hooks/useScrollReveal'
 import {
   About,
   Capabilities,
@@ -12,6 +13,8 @@ import {
 } from './components/Portfolio'
 
 function App() {
+  useScrollReveal()
+
   return (
     <ThemeProvider>
       <LanguageProvider>

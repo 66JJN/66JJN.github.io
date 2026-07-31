@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useTheme } from '../contexts/ThemeContext'
 import { resumePath } from '../data/portfolioContent'
+import { ThaiText } from './ThaiText'
 
 const Arrow = () => <span aria-hidden="true">↗</span>
 
@@ -12,9 +13,9 @@ const ExternalLink = ({ href, children, className = '' }) => (
 )
 
 const SectionHeading = ({ eyebrow, title, invert = false }) => (
-  <header className={`section-heading${invert ? ' section-heading--invert' : ''}`}>
+  <header className={`section-heading${invert ? ' section-heading--invert' : ''}`} data-reveal="heading">
     <p className="eyebrow">{eyebrow}</p>
-    <h2>{title}</h2>
+    <h2><ThaiText>{title}</ThaiText></h2>
   </header>
 )
 
@@ -86,7 +87,7 @@ export const Hero = () => {
       <div className="hero__copy">
         <p className="eyebrow">{content.hero.eyebrow}</p>
         <p className="hero__name">{content.hero.name}</p>
-        <h1>{content.hero.title}</h1>
+        <h1><ThaiText>{content.hero.title}</ThaiText></h1>
         <p className="hero__intro">{content.hero.intro}</p>
         <div className="hero__actions">
           <a className="button button--primary" href="#work">{content.hero.workCta}<span aria-hidden="true">↓</span></a>
@@ -102,16 +103,25 @@ export const Hero = () => {
   )
 }
 
+const imageTiles = Array.from({ length: 24 }, (_, index) => index)
+
 const ProjectMedia = ({ images, project }) => (
   <div className={`project-media project-media--${project}`}>
     {images.map((image) => (
-      <figure className={image.optional ? 'project-shot project-shot--optional' : 'project-shot'} key={image.src}>
+      <figure
+        className={image.optional ? 'project-shot project-shot--optional' : 'project-shot'}
+        data-image-reveal
+        key={image.src}
+      >
         <img
           src={image.src}
           alt={image.alt}
           loading="lazy"
           onError={image.optional ? (event) => { event.currentTarget.parentElement.hidden = true } : undefined}
         />
+        <span className="image-wipe" aria-hidden="true">
+          {imageTiles.map((tile) => <span data-reveal-tile key={tile} />)}
+        </span>
       </figure>
     ))}
   </div>
@@ -143,7 +153,7 @@ export const SelectedWork = () => {
       <SectionHeading eyebrow={content.selectedWork.eyebrow} title={content.selectedWork.title} />
       {content.projects.map((project) => (
         <article className={`project project--${project.id}`} data-project={project.id} key={project.id}>
-          <header className="project__header editorial-grid">
+          <header className="project__header editorial-grid" data-reveal="project-header">
             <p className="project__index">{project.index}</p>
             <div className="project__title">
               <p>{project.subtitle}</p>
@@ -151,7 +161,7 @@ export const SelectedWork = () => {
             </div>
             <p className="project__status">{project.status}</p>
           </header>
-          <div className="project__body editorial-grid">
+          <div className="project__body editorial-grid" data-reveal="project-body">
             <ProjectMedia images={project.images} project={project.id} />
             <div className="project__story">
               <p className="project__summary">{project.summary}</p>
@@ -182,7 +192,7 @@ export const Capabilities = () => {
       <SectionHeading eyebrow={content.capabilities.eyebrow} title={content.capabilities.title} />
       <div className="capability-grid">
         {content.capabilities.groups.map((group, index) => (
-          <article key={group.title}>
+          <article key={group.title} data-reveal="card">
             <p className="capability-grid__number">0{index + 1}</p>
             <h3>{group.title}</h3>
             <p className="capability-grid__tools">{group.tools}</p>
@@ -201,7 +211,7 @@ export const EngineeringNotes = () => {
       <SectionHeading eyebrow={content.engineering.eyebrow} title={content.engineering.title} />
       <div className="engineering-list">
         {content.engineering.items.map((item) => (
-          <article className="engineering-card" key={item.number}>
+          <article className="engineering-card" key={item.number} data-reveal="card">
             <p className="engineering-card__number">{item.number}</p>
             <h3>{item.title}</h3>
             <div><h4>{content.engineering.problem}</h4><p>{item.problem}</p></div>
@@ -217,12 +227,12 @@ export const About = () => {
   const { content } = useLanguage()
   return (
     <section id="about" className="about editorial-grid">
-      <p className="eyebrow">{content.about.eyebrow}</p>
-      <div className="about__copy">
-        <h2>{content.about.title}</h2>
+      <p className="eyebrow" data-reveal="label">{content.about.eyebrow}</p>
+      <div className="about__copy" data-reveal="copy">
+        <h2><ThaiText>{content.about.title}</ThaiText></h2>
         <p>{content.about.body}</p>
       </div>
-      <dl className="education">
+      <dl className="education" data-reveal="details">
         <div><dt>{content.about.labels.education}</dt><dd>{content.about.education}</dd></div>
         <div><dt>{content.about.labels.degree}</dt><dd>{content.about.degree}</dd></div>
         <div><dt>{content.about.labels.period}</dt><dd>{content.about.period}</dd></div>
@@ -236,12 +246,12 @@ export const Contact = () => {
   const { content } = useLanguage()
   return (
     <section id="contact" className="contact editorial-grid">
-      <p className="eyebrow">{content.contact.eyebrow}</p>
-      <div className="contact__headline">
-        <h2>{content.contact.title}</h2>
+      <p className="eyebrow" data-reveal="label">{content.contact.eyebrow}</p>
+      <div className="contact__headline" data-reveal="copy">
+        <h2><ThaiText>{content.contact.title}</ThaiText></h2>
         <p>{content.contact.body}</p>
       </div>
-      <div className="contact__links">
+      <div className="contact__links" data-reveal="details">
         <a href="mailto:pyaksda@gmail.com"><span>{content.contact.email}</span><strong>pyaksda@gmail.com</strong><Arrow /></a>
         <a href="tel:0952186772"><span>{content.contact.phone}</span><strong>095-218-6772</strong><Arrow /></a>
         <ExternalLink href="https://github.com/66JJN">{content.contact.github}</ExternalLink>
