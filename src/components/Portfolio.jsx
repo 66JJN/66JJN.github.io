@@ -25,12 +25,14 @@ const ThemeLamp = () => {
 
   return (
     <button className="lamp" type="button" onClick={toggleTheme} aria-label={label} aria-pressed={isDark}>
-      <span className="lamp__fixture" aria-hidden="true">
-        <span className="lamp__shade" />
-        <span className="lamp__bulb" />
-        <span className="lamp__cord" />
-        <span className="lamp__pull" />
-      </span>
+      <svg className="lamp__svg" viewBox="0 0 36 54" aria-hidden="true">
+        <path className="lamp__shade" d="M8 5h20l4 12H4L8 5Z" />
+        <circle className="lamp__bulb" cx="18" cy="20" r="4" />
+        <g className="lamp__pull-group">
+          <path className="lamp__cord" d="M18 24V43" />
+          <circle className="lamp__handle" cx="18" cy="47" r="3" />
+        </g>
+      </svg>
     </button>
   )
 }

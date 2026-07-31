@@ -38,13 +38,23 @@ describe('portfolio experience', () => {
     expect(document.documentElement.lang).toBe('en')
   })
 
-  it('keeps the lamp accessible and persists the selected theme', async () => {
+  it('defaults to light and persists a theme change', async () => {
     const user = userEvent.setup()
     render(<App />)
-    const lamp = screen.getByRole('button', { name: 'เปลี่ยนเป็นโหมดสว่าง' })
-    expect(lamp).toHaveAttribute('aria-pressed', 'true')
-    await user.click(lamp)
+    const lamp = screen.getByRole('button', { name: 'เปลี่ยนเป็นโหมดมืด' })
     expect(document.documentElement.dataset.theme).toBe('light')
-    expect(localStorage.getItem('portfolio-theme')).toBe('light')
+    expect(lamp).toHaveAttribute('aria-pressed', 'false')
+    await user.click(lamp)
+    expect(document.documentElement.dataset.theme).toBe('dark')
+    expect(localStorage.getItem('portfolio-theme')).toBe('dark')
+  })
+
+  it('keeps the lamp cord and handle in one continuous pull group', () => {
+    const { container } = render(<App />)
+    const lamp = screen.getByRole('button', { name: 'เปลี่ยนเป็นโหมดมืด' })
+    const pullGroup = container.querySelector('.lamp__pull-group')
+    expect(lamp.querySelector('svg')).toBeInTheDocument()
+    expect(pullGroup?.querySelector('.lamp__cord')).toBeInTheDocument()
+    expect(pullGroup?.querySelector('.lamp__handle')).toBeInTheDocument()
   })
 })
