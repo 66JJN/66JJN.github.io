@@ -50,4 +50,13 @@ describe('CMES Case Study', () => {
 
     expect(screen.getByRole('link', { name: 'ข้ามไปยังเนื้อหา' })).toHaveAttribute('href', '#case-study-main')
   })
+
+  it('reuses the same lamp theme control as the main portfolio header', () => {
+    const { container } = renderPage()
+    const lamp = screen.getByRole('button', { name: 'เปลี่ยนเป็นโหมดมืด' })
+
+    expect(container.querySelector('.case-study-header .header-actions')).toBeInTheDocument()
+    expect(lamp).toHaveClass('lamp')
+    expect(lamp.querySelector('.lamp__pull-group')).toBeInTheDocument()
+  })
 })

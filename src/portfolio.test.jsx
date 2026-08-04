@@ -99,6 +99,16 @@ describe('portfolio experience', () => {
       expect(wipe.querySelectorAll('[data-reveal-tile]')).toHaveLength(24)
     })
   })
+
+  it('marks CMES links by visual column instead of child position', () => {
+    render(<App />)
+    const caseStudyLink = screen.getByRole('link', { name: 'อ่านกรณีศึกษา' })
+    const links = caseStudyLink.closest('.project-links')
+
+    expect(links).toHaveClass('project-links--cmes')
+    expect(screen.getByRole('link', { name: 'Admin' })).toHaveClass('project-link--left')
+    expect(screen.getByRole('link', { name: 'User' })).toHaveClass('project-link--right')
+  })
 })
 
 describe('CMES Case Study navigation', () => {

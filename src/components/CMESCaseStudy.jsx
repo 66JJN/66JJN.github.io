@@ -1,6 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext'
-import { useTheme } from '../contexts/ThemeContext'
 import { resumePath } from '../data/portfolioContent'
+import { ThemeLamp } from './Portfolio'
 import { ThaiText } from './ThaiText'
 
 const Arrow = () => <span aria-hidden="true">↗</span>
@@ -35,12 +35,11 @@ const EngineeringCase = ({ item, labels }) => (
 
 const CaseStudyHeader = () => {
   const { language, toggleLanguage, content } = useLanguage()
-  const { isDark, toggleTheme } = useTheme()
 
   return (
     <header className="case-study-header">
       <a className="case-study-back" href="#/">← {content.cmesCaseStudy.back}</a>
-      <div className="case-study-header__actions">
+      <div className="header-actions">
         <button
           className="language-button"
           type="button"
@@ -51,15 +50,7 @@ const CaseStudyHeader = () => {
           <span aria-hidden="true">/</span>
           <span className={language === 'en' ? 'is-active' : ''}>EN</span>
         </button>
-        <button
-          className="case-study-theme-button"
-          type="button"
-          onClick={toggleTheme}
-          aria-label={isDark ? content.controls.themeLight : content.controls.themeDark}
-          aria-pressed={isDark}
-        >
-          <span aria-hidden="true">{isDark ? '☀' : '◐'}</span>
-        </button>
+        <ThemeLamp />
       </div>
     </header>
   )

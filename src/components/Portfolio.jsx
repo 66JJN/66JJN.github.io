@@ -19,7 +19,7 @@ const SectionHeading = ({ eyebrow, title, invert = false }) => (
   </header>
 )
 
-const ThemeLamp = () => {
+export const ThemeLamp = () => {
   const { isDark, toggleTheme } = useTheme()
   const { content } = useLanguage()
   const label = isDark ? content.controls.themeLight : content.controls.themeDark
@@ -130,21 +130,21 @@ const ProjectMedia = ({ images, project }) => (
 const ProjectLinks = ({ project, labels }) => {
   if (project.id === 'cmes') {
     return (
-      <div className="project-links">
+      <div className="project-links project-links--cmes">
         <a className="text-link project-links__case-study" href="#/cmes-case-study">
           <span>{labels.viewCaseStudy}</span><Arrow />
         </a>
-        <ExternalLink href={project.links.admin}>{labels.admin}</ExternalLink>
-        <ExternalLink href={project.links.user}>{labels.user}</ExternalLink>
-        <ExternalLink href={project.links.adminGithub}>{labels.admin} {labels.repository}</ExternalLink>
-        <ExternalLink href={project.links.userGithub}>{labels.user} {labels.repository}</ExternalLink>
+        <ExternalLink className="project-link--left" href={project.links.admin}>{labels.admin}</ExternalLink>
+        <ExternalLink className="project-link--right" href={project.links.user}>{labels.user}</ExternalLink>
+        <ExternalLink className="project-link--left" href={project.links.adminGithub}>{labels.admin} {labels.repository}</ExternalLink>
+        <ExternalLink className="project-link--right" href={project.links.userGithub}>{labels.user} {labels.repository}</ExternalLink>
       </div>
     )
   }
   return (
     <div className="project-links">
-      <ExternalLink href={project.links.live}>{labels.viewLive}</ExternalLink>
-      <ExternalLink href={project.links.github}>{labels.viewGithub}</ExternalLink>
+      <ExternalLink className="project-link--left" href={project.links.live}>{labels.viewLive}</ExternalLink>
+      <ExternalLink className="project-link--right" href={project.links.github}>{labels.viewGithub}</ExternalLink>
     </div>
   )
 }
