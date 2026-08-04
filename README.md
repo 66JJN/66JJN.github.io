@@ -17,6 +17,7 @@ Portfolio สำหรับสมัครฝึกงานตำแหน่�
 - Pixel-grid reveal สำหรับภาพโปรเจกต์
 - ป้องกันการตัดคำภาษาไทยกลางคำในหัวข้อสำคัญ
 - รองรับ keyboard navigation, visible focus และ `prefers-reduced-motion`
+- มี CMES Technical Case Study แบบอ่านสั้น เน้นปัญหา การตัดสินใจ ผลลัพธ์ และข้อจำกัดที่พิสูจน์ได้
 - ดาวน์โหลด Resume ได้จากหน้าเว็บไซต์
 
 ## Selected Projects
@@ -27,6 +28,7 @@ Portfolio สำหรับสมัครฝึกงานตำแหน่�
 
 - [CMES Admin](https://cmes-admin-frontend.vercel.app/)
 - [CMES User](https://cmes-user-frontend.vercel.app/?shopId=JJ)
+- [CMES Technical Case Study](https://66jjn.github.io/#/cmes-case-study)
 - [CMES-ADMIN Repository](https://github.com/66JJN/CMES-ADMIN)
 - [CMES-USER Repository](https://github.com/66JJN/CMES-USER)
 
@@ -77,15 +79,15 @@ npm run dev
 
 ```text
 src/
-├── components/          # Portfolio UI และ Thai heading renderer
+├── components/          # Portfolio UI, CMES Case Study และ Thai heading renderer
 ├── contexts/            # Language และ theme state
 ├── data/                # เนื้อหา ลิงก์ และข้อมูลสองภาษา
-├── hooks/               # Scroll reveal controller
+├── hooks/               # Scroll reveal controller และ lightweight hash routing
 ├── motion/              # Pure scroll/tile progress functions
 ├── styles/              # Design tokens และ global responsive styles
 ├── test/                # Test environment setup
 ├── text/                # Thai headline segmentation
-├── App.jsx              # Page composition
+├── App.jsx              # Page composition และ route selection
 └── main.jsx             # Application entry point
 ```
 
@@ -93,4 +95,4 @@ src/
 
 ## English Summary
 
-This is Suphakon Saephan's bilingual internship portfolio for Full-stack, Front-end, Back-end, and Web Developer roles. It presents CMES as an actively developed prototype/pilot and AirSafeTH as a completed learning project, with responsive layouts, persistent theme and language preferences, accessible controls, and scroll-driven motion that respects reduced-motion settings.
+This is Suphakon Saephan's bilingual internship portfolio for Full-stack, Front-end, Back-end, and Web Developer roles. It presents CMES as an actively developed prototype/pilot, including a concise technical case study about recoverable queues, tenant isolation, failure handling, evidence, and limitations. AirSafeTH is presented as a completed learning project. The site includes responsive layouts, persistent theme and language preferences, accessible controls, and scroll-driven motion that respects reduced-motion settings.
