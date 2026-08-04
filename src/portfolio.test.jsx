@@ -15,6 +15,21 @@ describe('portfolio content', () => {
     expect(translations.en.projects[0].status).toContain('Prototype/Pilot')
     expect(translations.en.projects[1].links.live).toBe('https://air-safe-th.vercel.app/')
   })
+
+  it('provides a concise bilingual CMES case-study contract', () => {
+    const thai = translations.th.cmesCaseStudy
+    const english = translations.en.cmesCaseStudy
+
+    expect(translations.th.selectedWork.viewCaseStudy).toBe('อ่านกรณีศึกษา')
+    expect(translations.en.selectedWork.viewCaseStudy).toBe('Read case study')
+    expect(thai.cases).toHaveLength(3)
+    expect(english.cases).toHaveLength(3)
+    expect(thai.evidence.items).toHaveLength(4)
+    expect(english.evidence.items).toHaveLength(4)
+    expect(Object.keys(english).sort()).toEqual(Object.keys(thai).sort())
+    expect(thai.limitations.body).toContain('60')
+    expect(english.limitations.body).toContain('60')
+  })
 })
 
 describe('portfolio experience', () => {
