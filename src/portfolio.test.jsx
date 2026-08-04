@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it } from 'vitest'
 import App from './App'
 import { translations } from './contexts/LanguageContext'
 
@@ -98,5 +98,33 @@ describe('portfolio experience', () => {
       expect(wipe).toHaveAttribute('aria-hidden', 'true')
       expect(wipe.querySelectorAll('[data-reveal-tile]')).toHaveLength(24)
     })
+  })
+})
+
+describe('CMES Case Study navigation', () => {
+  afterEach(() => {
+    window.history.replaceState(null, '', '/#/')
+  })
+
+  it('opens the Case Study from the CMES project and returns to the portfolio', async () => {
+    const user = userEvent.setup()
+    window.history.replaceState(null, '', '/#/')
+    render(<App />)
+
+    await user.click(screen.getByRole('link', { name: 'อ่านกรณีศึกษา' }))
+
+    expect(window.location.hash).toBe('#/cmes-case-study')
+    expect(screen.getByRole('heading', { level: 1, name: /จากคิวบนหน้าเว็บ/ })).toBeInTheDocument()
+
+    await user.click(screen.getAllByRole('link', { name: /กลับ Portfolio/ })[0])
+
+    expect(screen.getByRole('heading', { level: 1, name: 'สร้างเว็บตั้งแต่หน้าจอไปจนถึงระบบหลังบ้าน' })).toBeInTheDocument()
+  })
+
+  it('falls back to the portfolio for an unknown hash', () => {
+    window.history.replaceState(null, '', '/#/missing')
+    render(<App />)
+
+    expect(screen.getByRole('heading', { level: 1, name: 'สร้างเว็บตั้งแต่หน้าจอไปจนถึงระบบหลังบ้าน' })).toBeInTheDocument()
   })
 })

@@ -131,6 +131,9 @@ const ProjectLinks = ({ project, labels }) => {
   if (project.id === 'cmes') {
     return (
       <div className="project-links">
+        <a className="text-link project-links__case-study" href="#/cmes-case-study">
+          <span>{labels.viewCaseStudy}</span><Arrow />
+        </a>
         <ExternalLink href={project.links.admin}>{labels.admin}</ExternalLink>
         <ExternalLink href={project.links.user}>{labels.user}</ExternalLink>
         <ExternalLink href={project.links.adminGithub}>{labels.admin} {labels.repository}</ExternalLink>
