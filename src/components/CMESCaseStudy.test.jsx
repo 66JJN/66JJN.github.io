@@ -35,4 +35,19 @@ describe('CMES Case Study', () => {
     expect(screen.getByText('Using AI for speed without outsourcing ownership')).toBeInTheDocument()
     expect(document.documentElement.lang).toBe('en')
   })
+
+  it('exposes scoped hooks for the architecture, evidence, and disclosure layout', () => {
+    const { container } = renderPage()
+
+    expect(container.querySelector('.case-study-shell')).toBeInTheDocument()
+    expect(container.querySelector('.case-study-architecture')).toBeInTheDocument()
+    expect(container.querySelector('.case-study-evidence')).toBeInTheDocument()
+    expect(container.querySelector('.case-study-card details')).toBeInTheDocument()
+  })
+
+  it('lets keyboard users skip directly to the case study content', () => {
+    renderPage()
+
+    expect(screen.getByRole('link', { name: 'ข้ามไปยังเนื้อหา' })).toHaveAttribute('href', '#case-study-main')
+  })
 })

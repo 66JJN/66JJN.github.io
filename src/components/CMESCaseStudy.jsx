@@ -78,6 +78,7 @@ export const CMESCaseStudy = () => {
 
   return (
     <div className="case-study-page">
+      <a className="skip-link" href="#case-study-main">{content.controls.skip}</a>
       <CaseStudyHeader />
       <main id="case-study-main" className="case-study-shell">
         <section className="case-study-hero">
