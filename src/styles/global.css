@@ -158,6 +158,7 @@ ul { padding: 0; }
 .learning-project__story .stack-list { margin-top: 0; }
 .learning-project__story > .text-link { margin-top: 2rem; border-top: 1px solid var(--ink); }
 .learning-project__media { grid-column: 6 / -1; align-self: start; }
+.learning-project__media img { height: auto; aspect-ratio: auto; object-fit: contain; }
 .learning-project--no-media .learning-project__story { grid-column: 1 / span 7; max-width: 860px; }
 
 .section-shell { max-width: var(--max-width); margin-inline: auto; padding-inline: var(--gutter); }
