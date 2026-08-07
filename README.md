@@ -39,6 +39,14 @@ Portfolio สำหรับสมัครฝึกงานตำแหน่�
 - [เปิด AirSafeTH](https://air-safe-th.vercel.app/)
 - [AirSafeTH Repository](https://github.com/66JJN/AirSafeTH)
 
+## Learning Project
+
+### FAST FOOD
+
+โปรเจกต์ทดลองแพลตฟอร์มค้นหาร้านอาหารใกล้มหาวิทยาลัยพะเยา ปัจจุบันยังพัฒนาไม่สมบูรณ์และใช้เป็นพื้นที่ศึกษา Next.js, TypeScript, Supabase, Prisma และ Auth.js ขอบเขตที่ได้ทดลองคือการสร้างโปรเจกต์ Supabase ตั้งค่าการเชื่อมต่อฐานข้อมูล และจัดการค่า API ผ่าน environment variables ส่วน TypeScript และโครงสร้างระบบยังอยู่ระหว่างเรียนรู้
+
+- [FAST FOOD Repository](https://github.com/66JJN/FAST-FOOD)
+
 ## Tech Stack
 
 - React 19 และ React DOM 19

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { afterEach, describe, expect, it } from 'vitest'
 import App from './App'
@@ -14,6 +14,20 @@ describe('portfolio content', () => {
     expect(translations.th.projects.map(({ id }) => id)).toEqual(['cmes', 'airsafeth'])
     expect(translations.en.projects[0].status).toContain('Prototype/Pilot')
     expect(translations.en.projects[1].links.live).toBe('https://air-safe-th.vercel.app/')
+  })
+
+  it('keeps FAST FOOD separate from completed work and honest about its learning status', () => {
+    const thai = translations.th.learningProject
+    const english = translations.en.learningProject
+
+    expect(translations.th.projects.map(({ id }) => id)).toEqual(['cmes', 'airsafeth'])
+    expect(thai.github).toBe('https://github.com/66JJN/FAST-FOOD')
+    expect(english.github).toBe('https://github.com/66JJN/FAST-FOOD')
+    expect(thai).not.toHaveProperty('live')
+    expect(english).not.toHaveProperty('live')
+    expect(thai.image.src).toBe('/projects/fast-food.png')
+    expect(thai.limitation).toContain('TypeScript')
+    expect(english.limitation).toContain('TypeScript')
   })
 
   it('provides a concise bilingual CMES case-study contract', () => {
@@ -42,6 +56,29 @@ describe('portfolio experience', () => {
     expect(screen.getAllByRole('link', { name: 'ดาวน์โหลด Resume' })[0]).toHaveAttribute('href', '/Resume_Suphakon_Saephan.pdf')
     expect(screen.getByText('การศึกษา')).toBeInTheDocument()
     expect(screen.getAllByRole('list', { name: 'เทคโนโลยีที่ใช้' })).toHaveLength(2)
+  })
+
+  it('shows FAST FOOD as a separate learning project with GitHub only', () => {
+    const { container } = render(<App />)
+    const section = container.querySelector('.learning-project')
+
+    expect(section).toBeInTheDocument()
+    expect(within(section).getByRole('heading', { name: 'FAST FOOD' })).toBeInTheDocument()
+    expect(within(section).getByText('กำลังศึกษา · ยังไม่สมบูรณ์')).toBeInTheDocument()
+    expect(within(section).getByRole('link', { name: 'ดู GitHub' })).toHaveAttribute('href', 'https://github.com/66JJN/FAST-FOOD')
+    expect(section.querySelectorAll('a')).toHaveLength(1)
+  })
+
+  it('removes only the optional FAST FOOD image when it is unavailable', () => {
+    const { container } = render(<App />)
+    const section = container.querySelector('.learning-project')
+    const image = within(section).getByRole('img', { name: 'หน้าโปรเจกต์ FAST FOOD สำหรับค้นหาร้านอาหาร' })
+
+    expect(image).toHaveAttribute('src', '/projects/fast-food.png')
+    fireEvent.error(image)
+    expect(within(section).queryByRole('img')).not.toBeInTheDocument()
+    expect(section).toHaveClass('learning-project--no-media')
+    expect(within(section).getByRole('heading', { name: 'FAST FOOD' })).toBeInTheDocument()
   })
 
   it('switches every visible section to English from the header', async () => {

@@ -188,6 +188,50 @@ export const SelectedWork = () => {
   )
 }
 
+export const LearningProject = () => {
+  const { content } = useLanguage()
+  const project = content.learningProject
+  const [imageAvailable, setImageAvailable] = useState(true)
+
+  return (
+    <section className={`learning-project${imageAvailable ? '' : ' learning-project--no-media'}`} aria-labelledby="learning-project-title">
+      <header className="learning-project__header editorial-grid" data-reveal="heading">
+        <p className="eyebrow">{project.eyebrow}</p>
+        <div>
+          <h2 id="learning-project-title">{project.title}</h2>
+          <p className="learning-project__status">{project.status}</p>
+        </div>
+      </header>
+      <div className="learning-project__body editorial-grid" data-reveal="project-body">
+        <div className="learning-project__story">
+          <p className="learning-project__summary">{project.summary}</p>
+          <div className="learning-project__block">
+            <h3>{project.scopeLabel}</h3>
+            <p>{project.scope}</p>
+          </div>
+          <div className="learning-project__block learning-project__block--limitation">
+            <h3>{project.limitationLabel}</h3>
+            <p>{project.limitation}</p>
+          </div>
+          <p className="learning-project__stack-label">{project.stackLabel}</p>
+          <ul className="stack-list" aria-label={project.stackLabel}>
+            {project.stack.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+          <ExternalLink href={project.github}>{project.githubLabel}</ExternalLink>
+        </div>
+        {imageAvailable && (
+          <figure className="learning-project__media project-shot" data-image-reveal>
+            <img src={project.image.src} alt={project.image.alt} loading="lazy" onError={() => setImageAvailable(false)} />
+            <span className="image-wipe" aria-hidden="true">
+              {imageTiles.map((tile) => <span data-reveal-tile key={tile} />)}
+            </span>
+          </figure>
+        )}
+      </div>
+    </section>
+  )
+}
+
 export const Capabilities = () => {
   const { content } = useLanguage()
   return (

@@ -11,6 +11,7 @@ import {
   Footer,
   Header,
   Hero,
+  LearningProject,
   SelectedWork,
 } from './components/Portfolio'
 
@@ -20,6 +21,7 @@ const PortfolioPage = () => (
     <main id="main-content">
       <Hero />
       <SelectedWork />
+      <LearningProject />
       <Capabilities />
       <EngineeringNotes />
       <About />
